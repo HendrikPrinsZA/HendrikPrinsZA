@@ -24,7 +24,7 @@
 <img 
     align="left"
     width="100%"
-    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=HendrikPrinsZA&badges=3&show-avatar=true&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;"
+    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=HendrikPrinsZA&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;"
 />
 
 <img 
@@ -39,10 +39,24 @@
     src="https://github-readme-stats-taupe-two.vercel.app/api/wakatime?username=HendrikPrinsZA&hide_title=true&hide_border=true&langs_count=5&theme=tokyonight"
 />
 
-<div style="width:100%; padding: 10px;background-color: #38bcad;">
+<p style="width:100%; padding:10px; background-color:#38bcad; margin-bottom:20px;">
     <img
         align="left"
         width="100%"
         src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=activity&username=HendrikPrinsZA&branding=false&legend=true&tooltip=true&labels=true&style=--bg-color-0:%2338bcad;"
     />
-</div>
+</p>
+
+# Badges
+<p align="left"> 
+    <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=hendrikprinsza&theme=onedark&no-frame=true" alt="hendrikprinsza" /></a> 
+</p>
+
+# Connect
+<p align="left">
+    <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
+    <a href="https://linkedin.com/in/https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/hendrikprinsza/" height="30" width="40" /></a>
+    <a href="https://stackoverflow.com/users/7403334" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="7403334" height="30" width="40" /></a>
+    <a href="https://instagram.com/https://www.instagram.com/hendrikprinslooza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/hendrikprinslooza/" height="30" width="40" /></a>
+    <a href="https://medium.com/@hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@hendrikprinsza" height="30" width="40" /></a>
+</p>
