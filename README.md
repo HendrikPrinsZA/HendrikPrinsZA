@@ -24,7 +24,7 @@
 <img 
     align="left"
     width="100%"
-    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=HendrikPrinsZA&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;"
+    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=HendrikPrinsZA&badges=3&show-avatar=true&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;"
 />
 
 <img 
@@ -38,3 +38,11 @@
     width="100%"
     src="https://github-readme-stats-taupe-two.vercel.app/api/wakatime?username=HendrikPrinsZA&hide_title=true&hide_border=true&langs_count=5&theme=tokyonight"
 />
+
+<div style="width:100%; padding: 10px;background-color: #38bcad;">
+    <img
+        align="left"
+        width="100%"
+        src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=activity&username=HendrikPrinsZA&branding=false&legend=true&tooltip=true&labels=true&style=--bg-color-0:%2338bcad;"
+    />
+</div>
