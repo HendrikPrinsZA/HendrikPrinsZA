@@ -48,8 +48,10 @@
 </p>
 
 # Badges
-<p align="left"> 
-    <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=hendrikprinsza&theme=onedark&no-frame=true" alt="hendrikprinsza" /></a> 
+<p align="left" style="width: 100%;"> 
+    <a target="_blank" href="https://github.com/ryo-ma/github-profile-trophy">
+        <img src="https://github-profile-trophy.vercel.app/?username=hendrikprinsza&theme=tokyonight&no-frame=true&column=-1" alt="hendrikprinsza" />
+    </a> 
 </p>
 
 # Connect
