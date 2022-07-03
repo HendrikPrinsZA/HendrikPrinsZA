@@ -1,6 +1,6 @@
 # Hi there, I'm Hendrik 👋
 
-<table>
+<table cellspacing="0" cellpadding="0">
     <tr>
         <td>
             <image align="left" width="100%" src="https://github-readme-stats.vercel.app/api?username=hendrikprinsza&show_icons=true&theme=tokyonight" />
