@@ -14,4 +14,4 @@ jobs:
       - name: Fetch from Medium
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://medium.com/@hendrikprinsza/feed"
+          feed_list: "https://hendrikprinsza.medium.com/feed"
