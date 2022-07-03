@@ -1,4 +1,4 @@
-# Hi there, I'm Hendrik 👋
+# Hi there, I'm Hendrik <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
 <table cellspacing="0" cellpadding="0">
     <tr>
@@ -20,9 +20,7 @@
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- BLOG-POST-LIST:END -->
 
-<summary><b>📈&nbsp;&nbsp;Language&nbsp;/&nbsp;Framework stats</b></summary>
-<br/>
-
+# Language&nbsp;/&nbsp;Framework stats
 <img 
     align="left"
     width="100%"
