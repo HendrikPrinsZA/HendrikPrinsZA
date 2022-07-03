@@ -20,7 +20,7 @@
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- BLOG-POST-LIST:END -->
 
-# Language&nbsp;/&nbsp;Framework stats
+# Language&nbsp;/&nbsp;Framework stats ([CodersRank.io](https://profile.codersrank.io/user/hendrikprinsza/))
 <img 
     align="left"
     width="100%"
