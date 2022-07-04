@@ -1,5 +1,7 @@
 # Hi there, I'm Hendrik <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
+<img src="https://komarev.com/ghpvc/?username=HendrikPrinsZA&style=flat-square&color=blue" alt=""/>
+
 <table cellspacing="0" cellpadding="0">
     <tr>
         <td>
@@ -27,6 +29,8 @@
     src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=HendrikPrinsZA&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;"
 />
 
+<!-- https://github.com/codersrank-org/skills-chart-widget -->
+<!-- https://codersrank.io/ -->
 <img 
     align="left"
     width="100%"

@@ -1,0 +1,23 @@
+{
+  "name": "hendrikprinsza",
+  "version": "1.0.0",
+  "description": "HendrikPrinsZA Readme",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HendrikPrinsZA/HendrikPrinsZA.git"
+  },
+  "author": "Hendrik Prinsloo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HendrikPrinsZA/HendrikPrinsZA/issues"
+  },
+  "homepage": "https://github.com/HendrikPrinsZA/HendrikPrinsZA#readme",
+  "dependencies": {
+    "@codersrank/skills-chart": "^0.9.21",
+    "commander": "^9.3.0"
+  }
+}
