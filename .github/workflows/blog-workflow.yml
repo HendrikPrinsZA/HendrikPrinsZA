@@ -1,6 +1,7 @@
+name: Blog Posts Workflow
 on:
   schedule:
-    - cron: 0 10 * * 7 # Every Sunday at 10:00
+    - cron: '0 10 * * 7' # At 10:00 on Sunday.
 
 jobs:
   update-readme-with-blog:

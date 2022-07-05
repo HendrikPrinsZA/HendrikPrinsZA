@@ -1,10 +1,11 @@
+name: Stack Overflow Workflow
 on:
   schedule:
-    - cron: 0 11 * * 7 # Every Sunday at 11:00
+    - cron: '0 11 * * 7' # At 11:00 on Sunday.
 
 jobs:
   update-readme-with-stack-overflow:
-    name: Update this repo's README with latest activity from StackOverflow
+    name: Update this repo README with latest activity from StackOverflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
