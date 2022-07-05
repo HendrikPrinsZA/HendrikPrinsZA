@@ -1,4 +1,4 @@
-name: Blog Posts Workflow
+name: "Blog Posts Workflow"
 on:
   schedule:
     - cron: "0 10 * * 7" # At 10:00 on Sunday.

@@ -1,4 +1,4 @@
-name: Stats Workflow
+name: "Stats Workflow"
 on:
   schedule:
     - cron: "0 12 * * 7" # At 12:00 on Sunday.

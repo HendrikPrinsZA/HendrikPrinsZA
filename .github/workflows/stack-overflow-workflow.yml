@@ -1,4 +1,4 @@
-name: Stack Overflow Workflow
+name: "Stack Overflow Workflow"
 on:
   schedule:
     - cron: "0 11 * * 7" # At 11:00 on Sunday.
