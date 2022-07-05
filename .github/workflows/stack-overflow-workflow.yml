@@ -3,7 +3,6 @@ on:
   schedule:
     - cron: "0 11 * * 7" # At 11:00 on Sunday.
   workflow_dispatch: # Allow manual trigger
-
 jobs:
   update-readme-with-stack-overflow:
     name: Update this repo README with latest activity from StackOverflow
