@@ -2,7 +2,6 @@ name: Stats Workflow
 on:
   schedule:
     - cron: '0 12 * * 7' # Every Sunday at 12:00
-  workflow_dispatch: # Allow manual trigger
 
 jobs:
   fetch-latest-stats-job:
