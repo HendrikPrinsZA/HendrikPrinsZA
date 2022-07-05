@@ -1,7 +1,7 @@
 name: Fetch latest blog posts workflow
 on:
   schedule:
-    - cron: '0 23 * * 7' # Every Sunday at 23:00
+    - cron: '0 12 * * 7' # Every Sunday at 12:00
   workflow_dispatch: # Allow manual trigger
 
 jobs:
