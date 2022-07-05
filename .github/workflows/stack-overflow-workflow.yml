@@ -1,0 +1,17 @@
+name: Stack Overflow Workflow
+on:
+  schedule:
+    - cron: '0 12 * * 7' # Every Sunday at 12:00
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-readme-with-stack-overflow:
+    name: Update this repo's README with latest activity from StackOverflow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          comment_tag_name: "STACKOVERFLOW"
+          commit_message: "Updated readme with the latest stackOverflow data"
+          feed_list: "https://stackoverflow.com/feeds/user/7403334"
