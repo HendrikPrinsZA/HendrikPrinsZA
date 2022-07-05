@@ -20,11 +20,11 @@ _See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 
 ## My last year
-_See [profile](https://https://wakatime.com/@HendrikPrinsZA)_
+_See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
 
 ## My last 30 days
-_See [profile](https://https://wakatime.com/@HendrikPrinsZA)_
+_See [profile](https://wakatime.com/@HendrikPrinsZA)_
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
 ## Connect
