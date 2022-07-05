@@ -1,4 +1,3 @@
-name: Stack Overflow Workflow
 on:
   schedule:
     - cron: 0 11 * * 7 # Every Sunday at 11:00
