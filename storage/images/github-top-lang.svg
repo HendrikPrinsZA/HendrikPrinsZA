@@ -69,7 +69,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Most Used Languages</text>
+      >Languages (Public)</text>
     </g>
       </g>
     
@@ -90,7 +90,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="233.9"
+          width="233.89"
           height="8"
           fill="#E3F171"
         />
@@ -98,9 +98,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="233.9"
+          x="233.89"
           y="0"
-          width="48.12"
+          width="48.13"
           height="8"
           fill="#f1e05a"
         />
@@ -141,7 +141,7 @@
     <g>
       <circle cx="5" cy="6" r="5" fill="#E3F171" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Pascal 77.97%
+        Pascal 77.96%
       </text>
     </g>
   </g><g transform="translate(0, 25)">

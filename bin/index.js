@@ -26,11 +26,11 @@ class MyStats {
       },
       {
         key: 'github-stats',
-        url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}&count_private=true`,
+        url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}&count_private=true&custom_title=Stats%20(Public)`,
       },
       {
         key: 'github-top-lang',
-        url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}&count_private=true`,
+        url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}&count_private=true&custom_title=Languages%20(Public)`,
       },
       {
         key: 'codersrank-stats',

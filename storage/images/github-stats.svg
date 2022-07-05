@@ -8,7 +8,7 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Hendrik Prinsloo's GitHub Stats, Rank: A+</title>
+        <title id="titleId">Stats (Public), Rank: A+</title>
         <desc id="descId">Total Stars Earned: 7, Total Commits in 2022 : 7, Total PRs: 6, Total Issues: 0, Contributed to: 1</desc>
         <style>
           .header {
@@ -66,7 +66,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 113.26936987554502;
+        stroke-dashoffset: 113.26140042458682;
       }
     }
   
@@ -119,7 +119,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Hendrik Prinsloo's GitHub Stats</text>
+      >Stats (Public)</text>
     </g>
       </g>
     
@@ -174,7 +174,7 @@
         x="190" 
         y="12.5" 
         data-testid="commits"
-      >1.8k</text>
+      >1.9k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">

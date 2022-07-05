@@ -13,27 +13,21 @@
     </tr>
 </table>
 
-# Latest blog posts
-<!-- BLOG-POST-LIST:START -->
-- [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
-- [How To Escape the Flood of Writers’ Advice](https://medium.com/swlh/how-to-escape-the-flood-of-writers-advice-1c011cd3fef3?source=rss-231421fdefe3------2)
-- [How to Resign From Your Job and Leave On Good Terms](https://hendrikprinsza.medium.com/how-to-resign-like-a-human-babcb9bd9411?source=rss-231421fdefe3------2)
-- [Migrate Your Multi-Page Application to a Single-Page Application](https://javascript.plainenglish.io/migrate-your-multi-page-application-to-a-single-page-application-a16863d6249f?source=rss-231421fdefe3------2)
-- [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
-<!-- BLOG-POST-LIST:END -->
-
-# Language&nbsp;/&nbsp;Framework stats ([CodersRank.io](https://profile.codersrank.io/user/hendrikprinsza/))
+## Language&nbsp;/&nbsp;Framework stats
+_See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
 <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
-<image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
-
-# Badges
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 
-# My last 30 days ([WakaTime](https://wakatime.com/@HendrikPrinsZA))
+## My last year
+_See [profile](https://https://wakatime.com/@HendrikPrinsZA)_
+<image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
+
+## My last 30 days
+_See [profile](https://https://wakatime.com/@HendrikPrinsZA)_
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
-# Connect
+## Connect
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
     <a href="https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hendrikprinsza" height="30" width="40" /></a>
