@@ -13,21 +13,21 @@
     </tr>
 </table>
 
-## Language&nbsp;/&nbsp;Framework stats
+# Language&nbsp;/&nbsp;Framework stats
 _See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
 <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 
-## My last year
+# My last year
 _See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
 
-## My last 30 days
+# My last 30 days
 _See [profile](https://wakatime.com/@HendrikPrinsZA)_
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
-## Connect
+# Connect
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
     <a href="https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hendrikprinsza" height="30" width="40" /></a>
