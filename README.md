@@ -24,10 +24,6 @@
 # [My last 30 days](https://wakatime.com/@HendrikPrinsZA)
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
-# [StackOverflow Activity](https://stackoverflow.com/users/7403334)
-<!-- STACKOVERFLOW:START -->
-<!-- STACKOVERFLOW:END -->
-
 # [Latest blog posts](https://hendrikprinsza.medium.com/)
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
