@@ -8,7 +8,7 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Stats (Public), Rank: A+</title>
+        <title id="titleId">Stats (Public), Rank: A++</title>
         <desc id="descId">Total Stars Earned: 7, Total Commits in 2022 : 7, Total PRs: 6, Total Issues: 0, Contributed to: 1</desc>
         <style>
           .header {
@@ -66,7 +66,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 113.26140042458682;
+        stroke-dashoffset: 113.09406031994791;
       }
     }
   
@@ -141,7 +141,7 @@
             dominant-baseline="central"
             text-anchor="middle"
           >
-            A+
+            A++
           </text>
         </g>
       </g>
