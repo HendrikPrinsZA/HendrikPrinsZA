@@ -1,4 +1,4 @@
-# Hi there, I'm Hendrik <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
+# [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
 <image align="left" src="storage/images/github-profile-views.svg" />
 <br />
@@ -13,21 +13,18 @@
     </tr>
 </table>
 
-# Language&nbsp;/&nbsp;Framework stats
+# [Language&nbsp;/&nbsp;Framework stats](https://profile.codersrank.io/user/hendrikprinsza)
 <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
 <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
-_See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 
-# My last year
+# [My last year](https://profile.codersrank.io/user/hendrikprinsza)
 <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
-_See [profile](https://profile.codersrank.io/user/hendrikprinsza)_
 
-# My last 30 days
+# [My last 30 days](https://wakatime.com/@HendrikPrinsZA)
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
-_See [profile](https://wakatime.com/@HendrikPrinsZA)_
 
-# Latest blog posts
+# [Latest blog posts](https://hendrikprinsza.medium.com/)
 <!-- BLOG-POST-LIST:START -->
 - [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
 - [How To Escape the Flood of Writers’ Advice](https://medium.com/swlh/how-to-escape-the-flood-of-writers-advice-1c011cd3fef3?source=rss-231421fdefe3------2)
@@ -36,7 +33,7 @@ _See [profile](https://wakatime.com/@HendrikPrinsZA)_
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- BLOG-POST-LIST:END -->
 
-# Connect
+# [Connect](https://twitter.com/HendrikPrinsZA)
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
     <a href="https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hendrikprinsza" height="30" width="40" /></a>
