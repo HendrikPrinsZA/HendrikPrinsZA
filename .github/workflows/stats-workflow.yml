@@ -1,8 +1,9 @@
-name: "Stats Workflow"
+name: Stats Workflow
 on:
   schedule:
-    - cron: "0 12 * * 7" # At 12:00 on Sunday.
-  workflow_dispatch: # Allow manual trigger
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 jobs:
   fetch-latest-stats-job:
     name: Update this repo README with latest blog posts
