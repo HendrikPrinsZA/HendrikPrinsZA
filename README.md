@@ -15,10 +15,11 @@
 
 # [Language&nbsp;/&nbsp;Framework stats](https://profile.codersrank.io/user/hendrikprinsza)
 <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
-<image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
+<image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 
 # [My last year](https://profile.codersrank.io/user/hendrikprinsza)
+<image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/68538132-a5f0-4f81-b811-9e1be2236e0d.svg" />
 <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
 
 # [My last 30 days](https://wakatime.com/@HendrikPrinsZA)

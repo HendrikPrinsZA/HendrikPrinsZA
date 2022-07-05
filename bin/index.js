@@ -53,6 +53,10 @@ class MyStats {
         key: 'codersrank-activity-chart',
         url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=activity&username=${this.username}&branding=false&legend=true&tooltip=true&labels=true&style=--bg-color-0:%2338bcad;`,
         type: 'png'
+      },
+      {
+        key: 'wakatime-custom-chart',
+        url: `https://wakatime.com/share/@${this.username}/68538132-a5f0-4f81-b811-9e1be2236e0d.svg`
       }
     ];
 
