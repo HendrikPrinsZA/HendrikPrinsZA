@@ -1,7 +1,7 @@
 name: Blog Posts Workflow
 on:
   schedule:
-    - cron: '0 10 * * 7' # At 10:00 on Sunday.
+    - cron: "0 10 * * 7" # At 10:00 on Sunday.
   workflow_dispatch: # Allow manual trigger
   
 jobs:

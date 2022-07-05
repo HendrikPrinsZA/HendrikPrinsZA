@@ -1,7 +1,7 @@
 name: Stats Workflow
 on:
   schedule:
-    - cron: '0 12 * * 7' # At 12:00 on Sunday.
+    - cron: "0 12 * * 7" # At 12:00 on Sunday.
   workflow_dispatch: # Allow manual trigger
 
 jobs:
