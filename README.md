@@ -25,8 +25,8 @@
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
 # [Latest blog posts](https://hendrikprinsza.medium.com/)
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- MEDIUM:START -->
+<!-- MEDIUM:END -->
 
 # [Connect](https://twitter.com/HendrikPrinsZA)
 <p align="left">
