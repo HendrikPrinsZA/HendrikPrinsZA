@@ -13,7 +13,7 @@ npm-run-mystats-images
 This is very useful for testing, install [nektos/act](https://github.com/nektos/act) by [Casey Lee](https://cplee.org/).
 ```sh
 cd /path/to/this/repo
-act schedule
+act schedule --container-architecture linux/amd64
 ```
 [![YouTube preview](https://img.youtube.com/vi/Dee1FYYUP9I/0.jpg)](https://www.youtube.com/watch?v=Dee1FYYUP9I)
 
