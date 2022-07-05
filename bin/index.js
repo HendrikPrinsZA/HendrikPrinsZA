@@ -46,6 +46,11 @@ class MyStats {
       {
         key: 'github-trophees',
         url: `https://github-profile-trophy.vercel.app/?username=${this.username.toLowerCase()}&theme=tokyonight&no-frame=true&column=-1`
+      },
+      {
+        key: 'codersrank-activity-chart',
+        url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=activity&username=${this.username}&branding=false&legend=true&tooltip=true&labels=true&style=--bg-color-0:%2338bcad;`,
+        type: 'png'
       }
     ];
 
@@ -58,7 +63,7 @@ class MyStats {
       };
   
       download.image(options).then(() => {
-        console.log(`Saved image to '${options.dest}' (${options.url})`);
+        console.log(`Saved image to '${options.dest}'\n\`\`\`\n${options.url}\n\`\`\``);
       }).catch((err) => {
         console.log(`ERROR: Failed to generate image for ${options.dest}`);
         console.error(err);

@@ -23,10 +23,10 @@
 <!-- BLOG-POST-LIST:END -->
 
 # Language&nbsp;/&nbsp;Framework stats ([CodersRank.io](https://profile.codersrank.io/user/hendrikprinsza/))
-<image align="left" width="100%" src="storage/images/codersrank-stats.svg" />
+<image align="left" width="100%" src="storage/images/codersrank-stats.png" />
 <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
-<image align="left" width="100%" src="storage/images/codersrank-activity-chart.svg" />
+<image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
 
 # Badges
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
