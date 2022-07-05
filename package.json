@@ -20,6 +20,7 @@
   "dependencies": {
     "@codersrank/skills-chart": "^0.9.21",
     "commander": "^9.3.0",
-    "image-downloader": "^4.3.0"
+    "image-downloader": "^4.3.0",
+    "text-to-svg": "^3.1.5"
   }
 }

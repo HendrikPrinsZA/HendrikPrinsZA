@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
 const program = require('commander');
 const download = require('image-downloader');
+const TextToSVG = require('text-to-svg');
 
 const DEFAULT_USERNAME = 'HendrikPrinsZA';
 
@@ -24,11 +26,11 @@ class MyStats {
       },
       {
         key: 'github-stats',
-        url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}`,
+        url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}&count_private=true`,
       },
       {
         key: 'github-top-lang',
-        url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}`,
+        url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}&count_private=true`,
       },
       {
         key: 'codersrank-stats',
@@ -41,7 +43,7 @@ class MyStats {
       },
       {
         key: 'wakatime-last-30-days',
-        url: `https://github-readme-stats-taupe-two.vercel.app/api/wakatime?username=${this.username}&hide_title=true&hide_border=true&langs_count=10&theme=tokyonight&range=last_30_days`
+        url: `https://github-readme-stats-taupe-two.vercel.app/api/wakatime?username=${this.username}&hide_title=true&hide_border=true&langs_count=10&theme=tokyonight&range=last_30_days&count_private=true&layout=compact`
       },
       {
         key: 'github-trophees',
@@ -56,18 +58,34 @@ class MyStats {
 
     endpoints.forEach((endpoint) => {
       const type = endpoint.type ?? 'svg';
-      const dest = `../../storage/images/${endpoint.key}.${type}`;
+      const rel = `./storage/images/${endpoint.key}.${type}`;
+      const dest = `../.${rel}`;
       const options = {
         url: endpoint.url,
         dest: dest
       };
   
+      const debugLine = `\`\`\`\n${options.url}\n\`\`\``;
       download.image(options).then(() => {
-        console.log(`Saved image to '${options.dest}'\n\`\`\`\n${options.url}\n\`\`\``);
+        console.log(`Saved image to '${options.dest}'`);
+        console.log(debugLine)
       }).catch((err) => {
-        console.log(`ERROR: Failed to generate image for ${options.dest}`);
-        console.error(err);
-        process.exit(1);
+        const lines = [
+          `ERROR: Failed to generate image for ${options.dest}`,
+          debugLine
+        ];
+        console.log(lines.join("\n"));
+
+        // Fail softly, create placeholder image
+        const errorPath = `${rel}.error.svg`;
+        const textToSVG = TextToSVG.loadSync();
+        const attributes = {fill: 'red', stroke: 'black'};
+        const svgOptions = {x: 0, y: 0, fontSize: 24, anchor: 'top', attributes: attributes};
+        
+        const svg = textToSVG.getSVG(`Failed on "${endpoint.key}"`, svgOptions);
+        if (!fs.existsSync(errorPath)) {
+          fs.writeFileSync(errorPath, svg.toString(), { flag: 'w+' });
+        }
       });
     });
   }

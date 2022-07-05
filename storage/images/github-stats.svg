@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hendrik Prinsloo's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 7, Total Commits in 2022 : 7, Total PRs: 5, Total Issues: 0, Contributed to: 1</desc>
+        <desc id="descId">Total Stars Earned: 7, Total Commits in 2022 : 7, Total PRs: 6, Total Issues: 0, Contributed to: 1</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -66,7 +66,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 127.0372056939119;
+        stroke-dashoffset: 113.26936987554502;
       }
     }
   
@@ -174,7 +174,7 @@
         x="190" 
         y="12.5" 
         data-testid="commits"
-      >131</text>
+      >1.8k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -189,7 +189,7 @@
         x="190" 
         y="12.5" 
         data-testid="prs"
-      >5</text>
+      >6</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
