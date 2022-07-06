@@ -1,9 +1,9 @@
 # [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
-![](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
+![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
 
 <br />
-<table cellspacing="0" cellpadding="0">
+<table cellspacing="0" cellpadding="0" border="0">
     <tr>
         <td>
             <image align="left" width="100%" src="storage/images/github-stats.svg" />
@@ -26,7 +26,7 @@
 # [My last 30 days](https://wakatime.com/@HendrikPrinsZA)
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
-# [Latest blog posts](https://hendrikprinsza.medium.com/)
+# [Latest blog posts](https://hendrikprinsza.medium.com)
 <!-- MEDIUM:START -->
 - [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
 - [How to Escape the Flood of Writers’ Advice](https://medium.com/swlh/how-to-escape-the-flood-of-writers-advice-1c011cd3fef3?source=rss-231421fdefe3------2)
@@ -35,7 +35,7 @@
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- MEDIUM:END -->
 
-# [Connect](https://twitter.com/HendrikPrinsZA)
+---
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
     <a href="https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hendrikprinsza" height="30" width="40" /></a>

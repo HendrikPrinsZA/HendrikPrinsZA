@@ -1,8 +1,8 @@
 
       <svg
         width="495"
-        height="290"
-        viewBox="0 0 495 290"
+        height="202"
+        viewBox="0 0 495 202"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -129,7 +129,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 25)">
+  </g><g transform="translate(0, 17)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">JavaScript:</text>
       <text 
@@ -152,7 +152,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 50)">
+  </g><g transform="translate(0, 34)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">PHP:</text>
       <text 
@@ -175,7 +175,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 75)">
+  </g><g transform="translate(0, 51)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">Other:</text>
       <text 
@@ -198,7 +198,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 100)">
+  </g><g transform="translate(0, 68)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">Python:</text>
       <text 
@@ -221,7 +221,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 125)">
+  </g><g transform="translate(0, 85)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">YAML:</text>
       <text 
@@ -244,7 +244,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 150)">
+  </g><g transform="translate(0, 102)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">JSON:</text>
       <text 
@@ -267,7 +267,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 175)">
+  </g><g transform="translate(0, 119)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">HTML:</text>
       <text 
@@ -290,7 +290,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 200)">
+  </g><g transform="translate(0, 136)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">XML:</text>
       <text 
@@ -313,7 +313,7 @@
     </svg>
   
     </g>
-  </g><g transform="translate(0, 225)">
+  </g><g transform="translate(0, 153)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
       <text class="stat bold" y="12.5">Bash:</text>
       <text 
