@@ -1,0 +1,344 @@
+
+      <svg
+        width="495"
+        height="202"
+        viewBox="0 0 495 202"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <style>
+          .header {
+            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #70a5fd;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+          }
+          
+    
+    .stat {
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #38bdae;
+    }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    .rank-text {
+      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; 
+      animation: scaleInAnimation 0.3s ease-in-out forwards;
+    }
+    
+    .bold { font-weight: 700 }
+    .icon {
+      fill: #bf91f3;
+      display: none;
+    }
+    
+    .rank-circle-rim {
+      stroke: #70a5fd;
+      fill: none;
+      stroke-width: 6;
+      opacity: 0.2;
+    }
+    .rank-circle {
+      stroke: #70a5fd;
+      stroke-dasharray: 250;
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      opacity: 0.8;
+      transform-origin: -10px 8px;
+      transform: rotate(-90deg);
+      animation: rankAnimation 1s forwards ease-in-out;
+    }
+    
+    @keyframes rankAnimation {
+      from {
+        stroke-dashoffset: 251.32741228718345;
+      }
+      to {
+        stroke-dashoffset: NaN;
+      }
+    }
+  
+  
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae }
+    
+
+          
+    /* Animations */
+    @keyframes scaleInAnimation {
+      from {
+        transform: translate(-5px, 5px) scale(0);
+      }
+      to {
+        transform: translate(-5px, 5px) scale(1);
+      }
+    }
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+        </style>
+
+        undefined
+
+        <rect
+          data-testid="card-bg"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99%"
+          stroke="#E4E2E2"
+          width="494"
+          fill="#1a1b27"
+          stroke-opacity="0"
+        />
+
+        
+
+        <g
+          data-testid="main-card-body"
+          transform="translate(0, 25)"
+        >
+          
+    <svg x="0" y="0" width="100%">
+      <g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">Markdown:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="Markdown"
+      >4 hrs 6 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="23.49%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 17)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">JavaScript:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="JavaScript"
+      >3 hrs 54 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="22.36%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 34)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">PHP:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="PHP"
+      >2 hrs 43 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="15.64%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 51)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">Other:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="Other"
+      >2 hrs 37 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="15.03%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 68)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">Python:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="Python"
+      >1 hr 5 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="6.21%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 85)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">YAML:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="YAML"
+      >1 hr 1 min</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="5.85%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 102)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">JSON:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="JSON"
+      >46 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="4.47%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 119)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">HTML:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="HTML"
+      >38 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="3.65%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 136)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">XML:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="XML"
+      >15 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="2%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g><g transform="translate(0, 153)">
+    <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
+      <text class="stat bold" y="12.5">Bash:</text>
+      <text 
+        class="stat" 
+        x="350" 
+        y="12.5" 
+        data-testid="Bash"
+      >6 mins</text>
+      
+    <svg width="220" x="110" y="4">
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
+      <rect
+          height="8"
+          fill="#70a5fd"
+          rx="5" ry="5" x="0" y="0" 
+          data-testid="lang-progress"
+          width="2%"
+      >
+      </rect>
+    </svg>
+  
+    </g>
+  </g>
+    </svg> 
+  
+        </g>
+      </svg>
+    
