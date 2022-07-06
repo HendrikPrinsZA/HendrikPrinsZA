@@ -1,6 +1,7 @@
 # [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
-<image align="left" src="storage/images/github-profile-views.svg" />
+![](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
+
 <br />
 <table cellspacing="0" cellpadding="0">
     <tr>

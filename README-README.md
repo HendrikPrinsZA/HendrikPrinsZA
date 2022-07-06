@@ -1,6 +1,9 @@
 # Actual Readme
 Some notes about using this repo.
 
+## Profiles
+- https://yhype.me/
+
 ## Run directly via Node / My stats images (DO FIRST)
 ```sh
 cd /path/to/this/repo

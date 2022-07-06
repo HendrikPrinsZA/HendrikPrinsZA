@@ -20,11 +20,11 @@ class MyStats {
 
   images() {
     const endpoints = [
-      {
-        key: 'github-profile-views',
-        // url: `https://komarev.com/ghpvc/?username=${this.username}&style=flat-square&color=blue`
-        url: 'https://hit.yhype.me/github/profile?user_id=21366141'
-      },
+      // {
+      //   key: 'github-profile-views',
+      //   // url: `https://komarev.com/ghpvc/?username=${this.username}&style=flat-square&color=blue`
+      //   url: 'https://hit.yhype.me/github/profile?user_id=21366141'
+      // },
       {
         key: 'github-stats',
         url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}&count_private=true&custom_title=Stats%20(Public)`,
