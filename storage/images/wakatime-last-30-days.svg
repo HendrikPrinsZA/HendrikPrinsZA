@@ -114,7 +114,7 @@
         x="350" 
         y="12.5" 
         data-testid="Markdown"
-      >2 hrs 7 mins</text>
+      >4 hrs 6 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -123,7 +123,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="24%"
+          width="23.49%"
       >
       </rect>
     </svg>
@@ -131,13 +131,13 @@
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">Other:</text>
+      <text class="stat bold" y="12.5">JavaScript:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="Other"
-      >1 hr 58 mins</text>
+        data-testid="JavaScript"
+      >3 hrs 54 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -146,7 +146,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="22.34%"
+          width="22.36%"
       >
       </rect>
     </svg>
@@ -154,13 +154,13 @@
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">JavaScript:</text>
+      <text class="stat bold" y="12.5">PHP:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="JavaScript"
-      >1 hr 56 mins</text>
+        data-testid="PHP"
+      >2 hrs 43 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -169,7 +169,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="21.91%"
+          width="15.64%"
       >
       </rect>
     </svg>
@@ -177,13 +177,13 @@
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">PHP:</text>
+      <text class="stat bold" y="12.5">Other:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="PHP"
-      >1 hr 37 mins</text>
+        data-testid="Other"
+      >2 hrs 37 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -192,7 +192,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="18.35%"
+          width="15.03%"
       >
       </rect>
     </svg>
@@ -200,13 +200,13 @@
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">JSON:</text>
+      <text class="stat bold" y="12.5">Python:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="JSON"
-      >36 mins</text>
+        data-testid="Python"
+      >1 hr 5 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -215,7 +215,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="6.84%"
+          width="6.21%"
       >
       </rect>
     </svg>
@@ -229,7 +229,7 @@
         x="350" 
         y="12.5" 
         data-testid="YAML"
-      >14 mins</text>
+      >1 hr 1 min</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -238,7 +238,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="2.79%"
+          width="5.85%"
       >
       </rect>
     </svg>
@@ -246,13 +246,13 @@
     </g>
   </g><g transform="translate(0, 150)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">Bash:</text>
+      <text class="stat bold" y="12.5">JSON:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="Bash"
-      >6 mins</text>
+        data-testid="JSON"
+      >46 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -261,7 +261,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="2%"
+          width="4.47%"
       >
       </rect>
     </svg>
@@ -269,13 +269,13 @@
     </g>
   </g><g transform="translate(0, 175)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">XML:</text>
+      <text class="stat bold" y="12.5">HTML:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="XML"
-      >4 mins</text>
+        data-testid="HTML"
+      >38 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -284,7 +284,7 @@
           fill="#70a5fd"
           rx="5" ry="5" x="0" y="0" 
           data-testid="lang-progress"
-          width="2%"
+          width="3.65%"
       >
       </rect>
     </svg>
@@ -292,13 +292,13 @@
     </g>
   </g><g transform="translate(0, 200)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">INI:</text>
+      <text class="stat bold" y="12.5">XML:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="INI"
-      >4 mins</text>
+        data-testid="XML"
+      >15 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>
@@ -315,13 +315,13 @@
     </g>
   </g><g transform="translate(0, 225)">
     <g class="stagger" style="animation-delay: NaNms" transform="translate(25, 0)">
-      <text class="stat bold" y="12.5">TypeScript:</text>
+      <text class="stat bold" y="12.5">Bash:</text>
       <text 
         class="stat" 
         x="350" 
         y="12.5" 
-        data-testid="TypeScript"
-      >1 min</text>
+        data-testid="Bash"
+      >6 mins</text>
       
     <svg width="220" x="110" y="4">
       <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#38bdae"></rect>

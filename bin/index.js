@@ -22,7 +22,8 @@ class MyStats {
     const endpoints = [
       {
         key: 'github-profile-views',
-        url: `https://komarev.com/ghpvc/?username=${this.username}&style=flat-square&color=blue`
+        // url: `https://komarev.com/ghpvc/?username=${this.username}&style=flat-square&color=blue`
+        url: 'https://hit.yhype.me/github/profile?user_id=21366141'
       },
       {
         key: 'github-stats',
