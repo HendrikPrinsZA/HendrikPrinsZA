@@ -1,6 +1,7 @@
 # [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
 ![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
+![Last Updated Badge](storage/images/badge-last-updated.svg)
 
 <table cellspacing="0" cellpadding="0" border="0">
     <tr>

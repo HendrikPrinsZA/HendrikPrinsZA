@@ -19,7 +19,13 @@ class MyStats {
   }
 
   images() {
+    const lastUpdated = (new Date()).toISOString().split('T')[0]
+
     const endpoints = [
+      {
+        key: 'badge-last-updated',
+        url: `https://img.shields.io/static/v1?label=${encodeURIComponent('Last Updated')}&message=${encodeURIComponent(lastUpdated)}&color=lightgrey`
+      },
       {
         // https://github.com/anuraghazra/github-readme-stats
         key: 'github-stats',
