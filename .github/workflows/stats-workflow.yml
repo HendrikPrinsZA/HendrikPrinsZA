@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   fetch-latest-stats-job:
-    name: Update this repo README with latest blog posts
+    name: Update this repo README with latest stats
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
