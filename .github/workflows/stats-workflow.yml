@@ -1,8 +1,8 @@
 name: Stats Workflow
 on:
   schedule:
-    # Runs every 5 minutes
-    - cron: '*/5 * * * *'
+    # Runs every night
+    - cron: '0 0 * * *'
   workflow_dispatch:
 jobs:
   fetch-latest-stats-job:
