@@ -3,6 +3,8 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
 ![Last Updated Badge](storage/images/badge-last-updated.svg)
 
+Note that these stats are limited to the pool of data available from: [github.com](https://github.com), [wakatime.com](https://wakatime.com) and [codersrank.io](https://codersrank.io).
+
 <table cellspacing="0" cellpadding="0" border="0">
     <tr>
         <td>
