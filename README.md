@@ -14,27 +14,33 @@
     </tr>
 </table>
 
----
+<hr />
 
-# [Language&nbsp;/&nbsp;Framework stats](https://profile.codersrank.io/user/hendrikprinsza)
+# Language&nbsp;/&nbsp;Framework stats
 <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
 <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 
----
+See [here](https://profile.codersrank.io/user/hendrikprinsza)
 
-# [My last year](https://profile.codersrank.io/user/hendrikprinsza)
+<hr />
+
+# My last year
 <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" />
 <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/1d1f87aa-d5a4-4f5b-a5e1-019efe0e5b86.svg" />
 
----
+See [here](https://profile.codersrank.io/user/hendrikprinsza)
 
-# [My last 30 days](https://wakatime.com/@HendrikPrinsZA)
+<hr />
+
+# My last 30 days
 <image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
 
----
+See [here](https://wakatime.com/@HendrikPrinsZA)
 
-# [Latest blog posts](https://hendrikprinsza.medium.com)
+<hr />
+
+# Latest blog posts
 <!-- MEDIUM:START -->
 - [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
 - [How to Escape the Flood of Writers’ Advice](https://medium.com/swlh/how-to-escape-the-flood-of-writers-advice-1c011cd3fef3?source=rss-231421fdefe3------2)
@@ -43,7 +49,9 @@
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- MEDIUM:END -->
 
----
+See [here](https://hendrikprinsza.medium.com)
+
+<hr />
 
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
