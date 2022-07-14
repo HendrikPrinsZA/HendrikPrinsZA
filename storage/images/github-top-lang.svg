@@ -90,7 +90,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="233.87"
+          width="233.85"
           height="8"
           fill="#E3F171"
         />
@@ -98,9 +98,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="233.87"
+          x="233.85"
           y="0"
-          width="48.14"
+          width="48.16"
           height="8"
           fill="#f1e05a"
         />
@@ -141,7 +141,7 @@
     <g>
       <circle cx="5" cy="6" r="5" fill="#E3F171" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Pascal 77.96%
+        Pascal 77.95%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
