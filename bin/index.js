@@ -61,7 +61,7 @@ class MyStats {
       },
       {
         key: 'wakatime-custom-chart',
-        url: `https://wakatime.com/share/@${this.username}/68538132-a5f0-4f81-b811-9e1be2236e0d.svg`
+        url: `https://wakatime.com/share/@${this.username}/c7782cc6-1009-47f4-a289-6061b219db66.svg`
       }
     ];
 
