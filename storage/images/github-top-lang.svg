@@ -90,7 +90,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="233.85"
+          width="232.75"
           height="8"
           fill="#E3F171"
         />
@@ -98,9 +98,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="233.85"
+          x="232.75"
           y="0"
-          width="48.16"
+          width="47.94"
           height="8"
           fill="#f1e05a"
         />
@@ -108,9 +108,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="282.01"
+          x="280.69"
           y="0"
-          width="18.619999999999997"
+          width="19.990000000000002"
           height="8"
           fill="#4F5D95"
         />
@@ -118,9 +118,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="290.63"
+          x="290.68"
           y="0"
-          width="15.129999999999999"
+          width="15.1"
           height="8"
           fill="#e34c26"
         />
@@ -128,9 +128,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="295.76"
+          x="295.78000000000003"
           y="0"
-          width="14.24"
+          width="14.219999999999999"
           height="8"
           fill="#178600"
         />
@@ -141,28 +141,28 @@
     <g>
       <circle cx="5" cy="6" r="5" fill="#E3F171" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Pascal 77.95%
+        Pascal 77.58%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g>
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 16.05%
+        JavaScript 15.98%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
     <g>
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 2.87%
+        PHP 3.33%
       </text>
     </g>
   </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
     <g>
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        HTML 1.71%
+        HTML 1.70%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
