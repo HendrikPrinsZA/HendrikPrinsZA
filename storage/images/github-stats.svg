@@ -33,7 +33,7 @@
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; 
+      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     
@@ -43,7 +43,7 @@
       fill: #bf91f3;
       display: block;
     }
-    
+
     .rank-circle-rim {
       stroke: #70a5fd;
       fill: none;
@@ -67,7 +67,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 108.05429356178608;
+        stroke-dashoffset: 108.04638686921886;
       }
     }
   
