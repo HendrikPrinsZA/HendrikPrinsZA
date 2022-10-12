@@ -3,7 +3,7 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
 ![Last Updated Badge](storage/images/badge-last-updated.svg)
 
-Note that these stats are limited to the pool of data available from: [github.com](https://github.com), [wakatime.com](https://wakatime.com) and [codersrank.io](https://codersrank.io).
+The stats below are based on a limited pool of data available from [github.com](https://github.com), [wakatime.com](https://wakatime.com), and [codersrank.io](https://codersrank.io).
 
 <table cellspacing="0" cellpadding="0" border="0">
     <tr>
@@ -19,30 +19,22 @@ Note that these stats are limited to the pool of data available from: [github.co
 <hr />
 
 # Language&nbsp;/&nbsp;Framework stats
-<image align="left" width="100%" src="storage/images/codersrank-stats.png" />
-<image align="left" width="100%" src="storage/images/github-trophees.svg" />
-<image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
-
-See [here](https://profile.codersrank.io/user/hendrikprinsza)
+<a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
+    <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
+</a>
+<a target="_blank" href="https://github.com/HendrikPrinsZA?tab=achievements">
+    <image align="left" width="100%" src="storage/images/github-trophees.svg" />
+</a>
+<a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
+    <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
+</a>
 
 <hr />
 
-# My last year
-<!-- <image align="left" width="100%" src="storage/images/codersrank-activity-chart.png" /> -->
+# My last month
 <a href="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg">
     <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg" />
 </a>
-<!-- <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/1d1f87aa-d5a4-4f5b-a5e1-019efe0e5b86.svg" /> -->
-
-See [here](https://profile.codersrank.io/user/hendrikprinsza)
-<!-- 
-<hr />
-
-# My last 30 days
-<image src="https://wakatime.com/share/@HendrikPrinsZA/eb438c06-826d-4408-98a0-374a61c84ba7.svg" />
-<image align="left" width="100%" src="storage/images/wakatime-last-30-days.svg" />
-
-See [here](https://wakatime.com/@HendrikPrinsZA) -->
 
 <hr />
 
@@ -55,7 +47,6 @@ See [here](https://wakatime.com/@HendrikPrinsZA) -->
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- MEDIUM:END -->
 
-See [here](https://hendrikprinsza.medium.com)
 
 <hr />
 
