@@ -19,9 +19,6 @@ The stats below are based on a limited pool of data available from [github.com](
 <hr />
 
 # Language&nbsp;/&nbsp;Framework stats
-<a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
-    <image align="left" width="100%" src="storage/images/codersrank-stats.png" />
-</a>
 <a target="_blank" href="https://github.com/HendrikPrinsZA?tab=achievements">
     <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 </a>
