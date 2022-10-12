@@ -39,8 +39,8 @@ class MyStats {
       },
       {
         key: 'codersrank-stats',
-        // url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=${this.username}&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;`,
-        url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=${this.username}&badges=3&show-avatar=false&style=--header-bg-color:%23000;--border-radius:10px`,
+        url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=${this.username}&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;`,
+        // url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=${this.username}&badges=3&show-avatar=false&style=--header-bg-color:%23000;--border-radius:10px`,
         type: 'png'
       },
       // {
