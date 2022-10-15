@@ -7,24 +7,24 @@ See story mode https://hendrikprinsloo.io
 The stats below are based on a limited pool of data available from [github.com](https://github.com), [wakatime.com](https://wakatime.com), and [codersrank.io](https://codersrank.io).
 
 <table cellspacing="0" cellpadding="0" border="0">
-    <tr>
-        <td>
-            <image align="left" width="100%" src="storage/images/github-stats.svg" />
-        </td>
-        <td>
-            <image align="left" width="100%" src="storage/images/github-top-lang.svg" />
-        </td>
-    </tr>
+  <tr>
+    <td>
+      <image align="left" width="100%" src="storage/images/github-stats.svg" />
+    </td>
+    <td>
+      <image align="left" width="100%" src="storage/images/github-top-lang.svg" />
+    </td>
+  </tr>
 </table>
 
 <hr />
 
 # Language&nbsp;/&nbsp;Framework stats
 <a target="_blank" href="https://github.com/HendrikPrinsZA?tab=achievements">
-    <image align="left" width="100%" src="storage/images/github-trophees.svg" />
+  <image align="left" width="100%" src="storage/images/github-trophees.svg" />
 </a>
 <a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
-    <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
+  <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
 </a>
 
 <hr />
@@ -47,6 +47,7 @@ The stats below are based on a limited pool of data available from [github.com](
 
 <hr />
 
+<!-- SOCIAL:START -->
 <p align="left">
     <a href="https://twitter.com/hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hendrikprinsza" height="30" width="40" /></a>
     <a href="https://www.linkedin.com/in/hendrikprinsza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hendrikprinsza" height="30" width="40" /></a>
@@ -54,3 +55,4 @@ The stats below are based on a limited pool of data available from [github.com](
     <a href="https://www.instagram.com/hendrikprinslooza/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="hendrikprinslooza/" height="30" width="40" /></a>
     <a href="https://medium.com/@hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@hendrikprinsza" height="30" width="40" /></a>
 </p>
+<!-- SOCIAL:END -->
