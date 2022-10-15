@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const program = require('commander');
-const download = require('image-downloader');
-const TextToSVG = require('text-to-svg');
+import { existsSync, writeFileSync } from 'fs';
+import { option, command, opts as _opts, parse } from 'commander';
+import { image } from 'image-downloader';
+import { loadSync } from 'text-to-svg';
 
 const DEFAULT_USERNAME = 'HendrikPrinsZA';
 
@@ -80,7 +80,7 @@ class MyStats {
       };
   
       const debugLine = `- ${options.url}\n`;
-      download.image(options).then(() => {
+      image(options).then(() => {
         console.log(`Saved image to '${options.dest}'`);
         console.log(debugLine)
       }).catch((err) => {
@@ -92,31 +92,30 @@ class MyStats {
 
         // Fail softly, create placeholder image
         const errorPath = `${rel}.error.svg`;
-        const textToSVG = TextToSVG.loadSync();
+        const textToSVG = loadSync();
         const attributes = {fill: 'red', stroke: 'black'};
         const svgOptions = {x: 0, y: 0, fontSize: 24, anchor: 'top', attributes: attributes};
         
         const svg = textToSVG.getSVG(`Failed on "${endpoint.key}"`, svgOptions);
-        if (!fs.existsSync(errorPath)) {
-          fs.writeFileSync(errorPath, svg.toString(), { flag: 'w+' });
+        if (!existsSync(errorPath)) {
+          writeFileSync(errorPath, svg.toString(), { flag: 'w+' });
         }
       });
     });
   }
 }
 
-program
-  .option('-v, --verbose', 'output debug information')
+option('-v, --verbose', 'output debug information')
   .option('--username <string>', 'GitHub username', DEFAULT_USERNAME);
 
-program
-  .command('images')
+command('images')
   .description('Download profile images')
   .action((action) => {
-    const opts = program.opts();
+    const opts = _opts();
     const username = opts.username ?? null;
     const myStats = new MyStats(username);
     myStats.images(action);
   });
 
-program.parse(process.argv);
+// eslint-disable-next-line no-undef
+parse(process.argv);
