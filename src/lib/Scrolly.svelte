@@ -48,7 +48,6 @@
 
   const createObserver = (node, index) => {
     const handleIntersect = (e) => {
-      const intersecting = e[0].isIntersecting
       const ratio = e[0].intersectionRatio
       steps[index] = ratio
       mostInView()

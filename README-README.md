@@ -19,6 +19,4 @@ act schedule --container-architecture linux/amd64
 
 ## To do
 - Make username dynamic (pref .env, but check convention for GitHub workflows)
-
-## Wishlist
-- Host on Google Pages? This will enable using the dynamic web components, see https://hendrikprinsza.github.io/botline/
+- Look into https://www.devsamples.com/javascript/svelte/deploy-svelte-app-gh-pages
