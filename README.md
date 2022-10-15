@@ -1,7 +1,8 @@
 # [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
-![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA)
-![Last Updated Badge](storage/images/badge-last-updated.svg)
+![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](storage/images/badge-last-updated.svg)
+
+See story mode https://hendrikprinsloo.io
 
 The stats below are based on a limited pool of data available from [github.com](https://github.com), [wakatime.com](https://wakatime.com), and [codersrank.io](https://codersrank.io).
 
