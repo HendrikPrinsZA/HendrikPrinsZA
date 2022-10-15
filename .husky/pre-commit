@@ -3,3 +3,9 @@
 
 npm run eslint:fix
 npm run eslint:format
+
+if [ -z "$(git status --porcelain)" ]; then 
+  echo "All clean"
+else 
+  git add --all
+fi
