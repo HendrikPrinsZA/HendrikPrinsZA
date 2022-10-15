@@ -1,13 +1,13 @@
 <script>
-  import CodersRankLogo from './assets/codersrank.svg';
-  import CodersRankSummary from './components/CodersRankSummary.svelte';
-  import CodersRankSkills from './components/CodersRankSkills.svelte';
-  import CodersRankActivity from './components/CodersRankActivity.svelte';
-  import WakaTimeLogo from './assets/wakatime.svg';
-  import WakaTimeBadge from './components/WakaTimeBadge.svelte';
-  import WakaTimeLanguages from './components/WakaTimeLanguages.svelte';
+  import CodersRankLogo from './assets/codersrank.svg'
+  import CodersRankSummary from './components/CodersRankSummary.svelte'
+  import CodersRankSkills from './components/CodersRankSkills.svelte'
+  import CodersRankActivity from './components/CodersRankActivity.svelte'
+  import WakaTimeLogo from './assets/wakatime.svg'
+  import WakaTimeBadge from './components/WakaTimeBadge.svelte'
+  import WakaTimeLanguages from './components/WakaTimeLanguages.svelte'
 
-  const username = 'HendrikPrinsZA';
+  const username = 'HendrikPrinsZA'
 </script>
 
 <main>

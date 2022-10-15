@@ -9,20 +9,21 @@
 </script>
 
 <main>
-  <codersrank-summary {username} 
+  <codersrank-summary
+    {username}
     layout="horizontal"
     badges="3"
     show-avatar="true"
-    branding="false" 
+    branding="false"
   />
 </main>
 
 <style>
-codersrank-summary {
-  --bg-color: #0d1117;
-  --header-bg-color: #0d1117;
-  --name-font-size: 20px;
-  --badge-bg-color: #19212e;
-  --badge-text-color: #fff;
-}
+  codersrank-summary {
+    --bg-color: #0d1117;
+    --header-bg-color: #0d1117;
+    --name-font-size: 20px;
+    --badge-bg-color: #19212e;
+    --badge-text-color: #fff;
+  }
 </style>
