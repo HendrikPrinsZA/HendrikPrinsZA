@@ -1,15 +1,14 @@
 # Actual Readme
 Some notes about using this repo.
 
-## Profiles
+## Profile counter
 - https://yhype.me/
 
 ## Run directly via Node / My stats images (DO FIRST)
 ```sh
 npm run mystats-images
 ```
-![Alt Text](storage/samples/npm-run-mystats-images.gif)
-npm-run-mystats-images
+![Example](storage/samples/npm-run-mystats-images.gif)
 
 ## Run your GitHub Actions locally
 This is very useful for testing, install [nektos/act](https://github.com/nektos/act) by [Casey Lee](https://cplee.org/).
