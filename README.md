@@ -44,7 +44,6 @@ The stats below are based on a limited pool of data available from [github.com](
 - [A More Collaborative Recruitment Strategy](https://hendrikprinsza.medium.com/a-more-collaborative-recruitment-strategy-1d0ca0de76e8?source=rss-231421fdefe3------2)
 <!-- MEDIUM:END -->
 
-
 <hr />
 
 <p align="left">

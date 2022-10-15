@@ -79,7 +79,7 @@ class MyStats {
         dest: dest
       };
   
-      const debugLine = `\`\`\`\n${options.url}\n\`\`\``;
+      const debugLine = `- ${options.url}\n`;
       download.image(options).then(() => {
         console.log(`Saved image to '${options.dest}'`);
         console.log(debugLine)
