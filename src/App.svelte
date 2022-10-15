@@ -1,14 +1,13 @@
 <script>
-  import CodersRankLogo from './assets/codersrank.svg'
-  import CodersRankSummary from './components/CodersRankSummary.svelte'
-  import CodersRankSkills from './components/CodersRankSkills.svelte'
-  import CodersRankActivity from './components/CodersRankActivity.svelte'
+  import CodersRankLogo from './assets/codersrank.svg';
+  import CodersRankSummary from './components/CodersRankSummary.svelte';
+  import CodersRankSkills from './components/CodersRankSkills.svelte';
+  import CodersRankActivity from './components/CodersRankActivity.svelte';
+  import WakaTimeLogo from './assets/wakatime.svg';
+  import WakaTimeBadge from './components/WakaTimeBadge.svelte';
+  import WakaTimeLanguages from './components/WakaTimeLanguages.svelte';
 
-  import WakaTimeLogo from './assets/wakatime.svg'
-  import WakaTimeBadge from './components/WakaTimeBadge.svelte'
-  import WakaTimeLanguages from './components/WakaTimeLanguages.svelte'
-
-  const username = 'HendrikPrinsZA'
+  const username = 'HendrikPrinsZA';
 </script>
 
 <main>
@@ -32,12 +31,12 @@
 
 <style>
   .logo {
-    height: 6em;
-    padding: 1.5em;
+    height: 3em;
+    padding: 1em;
     will-change: filter;
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #fff);
   }
   .logo:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+    filter: drop-shadow(0 0 2em #2dde98);
   }
 </style>

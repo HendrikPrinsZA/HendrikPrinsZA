@@ -1,7 +1,7 @@
 <main>
   <figure>
     <embed
-      src="https://wakatime.com/share/@HendrikPrinsZA/75d09429-1d8c-43eb-83d1-1f63318229c6.svg"
+      src="https://wakatime.com/share/@HendrikPrinsZA/ed8ee08e-838f-493b-8a1f-0137c8ee3f72.svg"
     />
   </figure>
 </main>

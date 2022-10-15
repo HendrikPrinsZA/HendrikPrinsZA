@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { existsSync, writeFileSync } from 'fs';
-import { option, command, opts as _opts, parse } from 'commander';
-import { image } from 'image-downloader';
-import { loadSync } from 'text-to-svg';
+const fs = require('fs');
+const program = require('commander');
+const download = require('image-downloader');
+const TextToSVG = require('text-to-svg');
 
 const DEFAULT_USERNAME = 'HendrikPrinsZA';
 
@@ -27,26 +27,22 @@ class MyStats {
         url: `https://img.shields.io/static/v1?label=${encodeURIComponent('Last Updated')}&message=${encodeURIComponent(lastUpdated)}&color=lightgrey`
       },
       {
-        // https://github.com/anuraghazra/github-readme-stats
         key: 'github-stats',
         url: `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&theme=${this.theme}&count_private=true&custom_title=Stats%20(Public)`,
       },
       {
-        // https://github.com/anuraghazra/github-readme-stats
         key: 'github-top-lang',
-        // url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}&count_private=true&custom_title=Languages%20(Public)&hide=Pascal`,
         url: `https://github-readme-stats.vercel.app/api/top-langs?username=${this.username}&layout=compact&theme=${this.theme}&count_private=true&custom_title=Languages%20(Public)`,
       },
       {
         key: 'codersrank-stats',
         url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=${this.username}&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;`,
-        // url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=${this.username}&badges=3&show-avatar=false&style=--header-bg-color:%23000;--border-radius:10px`,
         type: 'png'
       },
-      // {
-      //   key: 'codersrank-graph',
-      //   url: `https://cr-skills-chart-widget.azurewebsites.net/api/api?username=${this.username}&branding=false&bg=%23292b3e&style=--legend-text-color:%2338bcad;--label-font-weight=300;`
-      // },
+      {
+        key: 'codersrank-graph',
+        url: `https://cr-skills-chart-widget.azurewebsites.net/api/api?username=${this.username}&branding=false&bg=%23292b3e&style=--legend-text-color:%2338bcad;--label-font-weight=300;`
+      },
       {
         key: 'codersrank-graph',
         url: `https://cr-skills-chart-widget.azurewebsites.net/api/api?username=${this.username}&branding=false&bg=%23292b3e&style=--legend-text-color:%2338bcad;--label-font-weight=300;`
@@ -80,10 +76,11 @@ class MyStats {
       };
   
       const debugLine = `- ${options.url}\n`;
-      image(options).then(() => {
+      download.image(options).then(() => {
         console.log(`Saved image to '${options.dest}'`);
         console.log(debugLine)
       }).catch((err) => {
+        console.log(err);
         const lines = [
           `ERROR: Failed to generate image for ${options.dest}`,
           debugLine
@@ -92,30 +89,31 @@ class MyStats {
 
         // Fail softly, create placeholder image
         const errorPath = `${rel}.error.svg`;
-        const textToSVG = loadSync();
+        const textToSVG = TextToSVG.loadSync();
         const attributes = {fill: 'red', stroke: 'black'};
         const svgOptions = {x: 0, y: 0, fontSize: 24, anchor: 'top', attributes: attributes};
         
         const svg = textToSVG.getSVG(`Failed on "${endpoint.key}"`, svgOptions);
-        if (!existsSync(errorPath)) {
-          writeFileSync(errorPath, svg.toString(), { flag: 'w+' });
+        if (!fs.existsSync(errorPath)) {
+          fs.writeFileSync(errorPath, svg.toString(), { flag: 'w+' });
         }
       });
     });
   }
 }
 
-option('-v, --verbose', 'output debug information')
+program
+  .option('-v, --verbose', 'output debug information')
   .option('--username <string>', 'GitHub username', DEFAULT_USERNAME);
 
-command('images')
+program
+  .command('images')
   .description('Download profile images')
   .action((action) => {
-    const opts = _opts();
+    const opts = program.opts();
     const username = opts.username ?? null;
     const myStats = new MyStats(username);
     myStats.images(action);
   });
 
-// eslint-disable-next-line no-undef
-parse(process.argv);
+program.parse(process.argv);
