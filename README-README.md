@@ -20,3 +20,8 @@ act schedule --container-architecture linux/amd64
 ## To do
 - Make username dynamic (pref .env, but check convention for GitHub workflows)
 - Look into https://www.devsamples.com/javascript/svelte/deploy-svelte-app-gh-pages
+
+## Wishlist
+- https://pudding.cool/2020/12/judge-my-spotify/
+- https://musicscapes.herokuapp.com/musicScape
+- https://obscurifymusic.com/profile?id=3r7ae6nxih3ectkesx04jwq55&code=4e9931bd7188e4ee
