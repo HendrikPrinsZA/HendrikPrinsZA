@@ -30,7 +30,7 @@
     "@codersrank/summary": "^0.9.13",
     "@sveltejs/adapter-static": "^1.0.0-next.46",
     "@sveltejs/pancake": "^0.0.18",
-    "@sveltejs/vite-plugin-svelte": "^1.0.2",
+    "@sveltejs/vite-plugin-svelte": "^1.1.0",
     "commander": "^9.3.0",
     "d3": "^7.6.1",
     "eslint": "^8.26.0",
