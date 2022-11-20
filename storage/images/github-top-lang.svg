@@ -90,7 +90,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="228.97"
+          width="228.9"
           height="8"
           fill="#E3F171"
         />
@@ -98,9 +98,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="228.97"
+          x="228.9"
           y="0"
-          width="47.55"
+          width="47.54"
           height="8"
           fill="#f1e05a"
         />
@@ -108,9 +108,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="276.52"
+          x="276.44"
           y="0"
-          width="14.32"
+          width="14.41"
           height="8"
           fill="#4F5D95"
         />
@@ -118,7 +118,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="290.84"
+          x="290.85"
           y="0"
           width="15.01"
           height="8"
@@ -128,7 +128,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="295.84999999999997"
+          x="295.86"
           y="0"
           width="14.15"
           height="8"
@@ -141,7 +141,7 @@
     <g>
       <circle cx="5" cy="6" r="5" fill="#E3F171" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Pascal 76.32%
+        Pascal 76.30%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
@@ -155,7 +155,7 @@
     <g>
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 4.77%
+        PHP 4.80%
       </text>
     </g>
   </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
