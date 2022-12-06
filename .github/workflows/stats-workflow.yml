@@ -16,5 +16,5 @@ jobs:
       - run: npm install
       - run: npm run mystats-images
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
 
