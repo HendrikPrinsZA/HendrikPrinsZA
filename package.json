@@ -33,7 +33,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.4.0",
     "commander": "^9.3.0",
     "d3": "^7.8.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.2",
     "image-downloader": "^4.3.0",
