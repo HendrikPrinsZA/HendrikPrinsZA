@@ -38,7 +38,7 @@ jobs:
           node-version: '18'
       - name: Build artifacts 
         run: |
-          npm i
+          npm i --force
           npm run build
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
