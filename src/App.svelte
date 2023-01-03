@@ -25,7 +25,7 @@
     </a>
   </div>
   <CodersRankSummary {username} />
-  <CodersRankLanguages />
+  <CodersRankLanguages {username} />
   <CodersRankSkills {username} />
   <CodersRankActivity {username} />
 
