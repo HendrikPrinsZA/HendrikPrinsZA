@@ -20,7 +20,38 @@
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
-          .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae }
+          
+    @keyframes slideInAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: calc(100%-100px);
+      }
+    }
+    @keyframes growWidthAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .lang-name {
+      font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
+      fill: #38bdae;
+    }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    #rect-mask rect{
+      animation: slideInAnimation 1s ease-in-out forwards;
+    }
+    .lang-progress{
+      animation: growWidthAnimation 0.6s ease-in-out forwards;
+    }
+    
 
           
     /* Animations */
@@ -41,7 +72,7 @@
       }
     }
   
-          * { animation-duration: 0s !important; animation-delay: 0s !important; }
+          
         </style>
 
         
@@ -82,7 +113,7 @@
     <svg data-testid="lang-items" x="25">
       
     <mask id="rect-mask">
-      <rect x="0" y="0" width="300" height="8" fill="white" rx="5" />
+      <rect x="0" y="0" width="300" height="8" fill="white" rx="5"/>
     </mask>
     
         <rect
@@ -138,35 +169,35 @@
 
     <g transform="translate(0, 25)">
       <g transform="translate(0, 0)"><g transform="translate(0, 0)">
-    <g>
+    <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#E3F171" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         Pascal 76.97%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
-    <g>
+    <g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         JavaScript 15.99%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
-    <g>
+    <g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         PHP 3.96%
       </text>
     </g>
   </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
-    <g>
+    <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         HTML 1.68%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
-    <g>
+    <g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#178600" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         C# 1.40%
