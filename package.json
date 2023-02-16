@@ -30,7 +30,6 @@
     "@codersrank/summary": "^0.9.13",
     "@sveltejs/adapter-static": "^2.0.0",
     "@sveltejs/pancake": "^0.0.18",
-    "@sveltejs/vite-plugin-svelte": "^2.0.2",
     "commander": "^10.0.0",
     "d3": "^7.8.0",
     "eslint": "^8.32.0",
@@ -44,5 +43,8 @@
     "svelte-frappe-charts": "^1.10.0",
     "text-to-svg": "^3.1.5",
     "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.4.0"
   }
 }
