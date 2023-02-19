@@ -56,5 +56,3 @@ The stats below are based on a limited pool of data available from [github.com](
     <a href="https://medium.com/@hendrikprinsza" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@hendrikprinsza" height="30" width="40" /></a>
 </p>
 <!-- SOCIAL:END -->
-
-![](https://hit.yhype.me/github/profile?user_id=21366141)
