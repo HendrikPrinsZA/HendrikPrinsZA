@@ -2,7 +2,7 @@
 
 ![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](storage/images/badge-last-updated.svg)
 
-See story mode https://hendrikprinsloo.io
+See interactive mode https://hendrikprinsloo.io
 
 The stats below are based on a limited pool of data available from [github.com](https://github.com), [wakatime.com](https://wakatime.com), and [codersrank.io](https://codersrank.io).
 
