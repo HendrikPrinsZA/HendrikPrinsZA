@@ -38,7 +38,7 @@ The stats below are based on a limited pool of data available from [github.com](
 
 # Latest blog posts
 <!-- MEDIUM:START -->
-- [A Simple Way to Experiment with Performance Techniques in Laravel](https://hendrikprinsza.medium.com/a-simple-way-to-experiment-with-different-techniques-in-laravel-acf74404654b?source=rss-231421fdefe3------2)
+- [A Simple Way to Experiment with Performance Techniques in Laravel](https://medium.com/swlh/a-simple-way-to-experiment-with-different-techniques-in-laravel-acf74404654b?source=rss-231421fdefe3------2)
 - [Automate Your Resume on GitHub](https://hendrikprinsza.medium.com/automate-your-resume-on-github-124e63909a58?source=rss-231421fdefe3------2)
 - [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
 - [How to Escape the Flood of Writers’ Advice](https://medium.com/swlh/how-to-escape-the-flood-of-writers-advice-1c011cd3fef3?source=rss-231421fdefe3------2)
