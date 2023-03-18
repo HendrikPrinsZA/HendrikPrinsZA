@@ -39,7 +39,7 @@ The stats below are based on a limited pool of data available from [github.com](
 # Latest blog posts
 <!-- MEDIUM:START -->
 - [Using Tome to Create Presentations with AI](https://hendrikprinsza.medium.com/using-tome-to-create-presentations-with-ai-1c249d67b293?source=rss-231421fdefe3------2)
-- [How to Gain 100 Followers in 5 years](https://writingcooperative.com/how-to-gain-100-followers-in-5-years-b2a391c596cf?source=rss-231421fdefe3------2)
+- [How to Gain 100 Followers in Only 5 Years](https://writingcooperative.com/how-to-gain-100-followers-in-5-years-b2a391c596cf?source=rss-231421fdefe3------2)
 - [A Simple Way to Experiment with Performance Techniques in Laravel](https://medium.com/swlh/a-simple-way-to-experiment-with-different-techniques-in-laravel-acf74404654b?source=rss-231421fdefe3------2)
 - [Automate Your Resume on GitHub](https://hendrikprinsza.medium.com/automate-your-resume-on-github-124e63909a58?source=rss-231421fdefe3------2)
 - [A Challenge for the CodeWars Community](https://javascript.plainenglish.io/a-challenge-for-the-codewars-community-5c6945e92e1?source=rss-231421fdefe3------2)
