@@ -38,11 +38,11 @@ The stats below are based on a limited pool of data available from [github.com](
 
 # Latest blog posts
 <!-- MEDIUM:START -->
+- [Practical Guide: How to Build a Web Scraper with Laravel Actions](https://hendrikprinsza.medium.com/practical-guide-how-to-build-a-web-scraper-with-laravel-actions-63575c33df71?source=rss-231421fdefe3------2)
 - [Uncovering the Fascinating Evolution of PHP: From Humble Beginnings to Dominating the Web](https://hendrikprinsza.medium.com/the-history-of-php-from-1995-to-2023-f5a1bae63554?source=rss-231421fdefe3------2)
 - [The Power of Laravel: Real-Life Success Stories from Top Companies](https://hendrikprinsza.medium.com/the-power-of-laravel-real-life-success-stories-from-top-companies-692608b78c10?source=rss-231421fdefe3------2)
 - [Who are the YouTubers Getting Sued for $1,000,000,000?](https://hendrikprinsza.medium.com/who-are-the-youtubers-getting-sued-for-1-000-000-000-992278eed71d?source=rss-231421fdefe3------2)
 - [Using Tome to Create Presentations with AI](https://hendrikprinsza.medium.com/using-tome-to-create-presentations-with-ai-1c249d67b293?source=rss-231421fdefe3------2)
-- [The Ultimate Guide to Gain Massive Followers: How to Gain 100 Followers in Only 5 Years](https://hendrikprinsza.medium.com/how-to-gain-100-followers-in-5-years-b2a391c596cf?source=rss-231421fdefe3------2)
 <!-- MEDIUM:END -->
 
 <hr />
