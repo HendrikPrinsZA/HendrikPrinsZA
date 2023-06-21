@@ -36,7 +36,10 @@
       font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
-    .rank-progress-text {
+    .rank-percentile-header {
+      font-size: 14px;
+    }
+    .rank-percentile-text {
       font-size: 16px;
     }
     
@@ -70,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 112.59685774154735;
+        stroke-dashoffset: 112.58918774092453;
       }
     }
   
