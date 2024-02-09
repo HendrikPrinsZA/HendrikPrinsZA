@@ -1,116 +1,15 @@
 
-      <svg
-        width="495"
-        height="120"
-        viewBox="0 0 495 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <style>
-          .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #70a5fd;
-            animation: fadeInAnimation 0.8s ease-in-out forwards;
-          }
-          
-    
-    .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #38bdae;
-    }
-    .stagger {
-      opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }
-    .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; 
-      animation: scaleInAnimation 0.3s ease-in-out forwards;
-    }
-    
-    .bold { font-weight: 700 }
-    .icon {
-      fill: #bf91f3;
-      display: none;
-    }
-    
-    .rank-circle-rim {
-      stroke: #70a5fd;
-      fill: none;
-      stroke-width: 6;
-      opacity: 0.2;
-    }
-    .rank-circle {
-      stroke: #70a5fd;
-      stroke-dasharray: 250;
-      fill: none;
-      stroke-width: 6;
-      stroke-linecap: round;
-      opacity: 0.8;
-      transform-origin: -10px 8px;
-      transform: rotate(-90deg);
-      animation: rankAnimation 1s forwards ease-in-out;
-    }
-    
-    @keyframes rankAnimation {
-      from {
-        stroke-dashoffset: 251.32741228718345;
-      }
-      to {
-        stroke-dashoffset: NaN;
-      }
-    }
+    <svg width="495" height="120" viewBox="0 0 495 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #2F80ED }
+    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #252525 }
+    .gray { fill: #858585 }
+    </style>
+    <rect x="0.5" y="0.5" width="494" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
+    <text x="25" y="45" class="text">Something went wrong! file an issue at https://git.io/JJmN9</text>
+    <text data-testid="message" x="25" y="55" class="text small">
+      <tspan x="25" dy="18">Request failed with status code 400</tspan>
+      <tspan x="25" dy="18" class="gray"></tspan>
+    </text>
+    </svg>
   
-  
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae }
-    
-
-          
-    /* Animations */
-    @keyframes scaleInAnimation {
-      from {
-        transform: translate(-5px, 5px) scale(0);
-      }
-      to {
-        transform: translate(-5px, 5px) scale(1);
-      }
-    }
-    @keyframes fadeInAnimation {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  
-        </style>
-
-        undefined
-
-        <rect
-          data-testid="card-bg"
-          x="0.5"
-          y="0.5"
-          rx="4.5"
-          height="99%"
-          stroke="#E4E2E2"
-          width="494"
-          fill="#1a1b27"
-          stroke-opacity="0"
-        />
-
-        
-
-        <g
-          data-testid="main-card-body"
-          transform="translate(0, 25)"
-        >
-          
-    <svg x="0" y="0" width="100%">
-      <g transform="translate(0, 0)">
-    <text x="25" y="11" class="stat bold" fill="#38bdae">No coding activity this week</text>
-  </g>
-    </svg> 
-  
-        </g>
-      </svg>
-    
