@@ -1,50 +1,15 @@
 {
-  "name": "mystats",
-  "version": "1.0.0",
-  "description": "HendrikPrinsZA Readme",
-  "main": "bin/index.js",
+  "name": "astro-profile",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mystats-images": "node bin/index.js images",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "eslint:fix": "npx eslint --fix \"{,!(node_modules|public|bin)/**/}*.svelte\"",
-    "eslint:format": "npx prettier --write \"{,!(node_modules|public|bin)/**/}*.svelte\"",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HendrikPrinsZA/HendrikPrinsZA.git"
-  },
-  "author": "Hendrik Prinsloo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HendrikPrinsZA/HendrikPrinsZA/issues"
-  },
-  "homepage": "https://github.com/HendrikPrinsZA/HendrikPrinsZA#readme",
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@codersrank/activity": "^0.9.14",
-    "@codersrank/skills-chart": "^0.9.21",
-    "@codersrank/summary": "^0.9.13",
-    "@sveltejs/adapter-static": "^2.0.0",
-    "@sveltejs/pancake": "^0.0.18",
-    "commander": "^10.0.0",
-    "d3": "^7.8.0",
-    "eslint": "^8.32.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "husky": "^8.0.2",
-    "image-downloader": "^4.3.0",
-    "papaparse": "^5.3.2",
-    "prettier": "^2.8.3",
-    "prettier-plugin-svelte": "^2.9.0",
-    "svelte": "^3.55.1",
-    "svelte-frappe-charts": "^1.10.0",
-    "text-to-svg": "^3.1.5",
-    "vite": "^4.0.4"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.4.0"
+    "astro": "^4.5.16"
   }
 }
