@@ -1,6 +1,6 @@
 ---
 title: Initial post
-author: Sat Naing
+author: Hendrik Prinsloo
 pubDatetime: 2024-04-05T22:48:21.569Z
 slug: initial-post
 featured: true
