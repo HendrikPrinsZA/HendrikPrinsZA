@@ -38,9 +38,10 @@ jobs:
           node-version: '18'
       - name: Build artifacts 
         run: |
-          echo "Hack: Removed package-lock.json to ensure latest dependencies are installed"
-          rm package-lock.json
-          npm i --force
+          # echo "Hack: Removed package-lock.json to ensure latest dependencies are installed"
+          # rm package-lock.json
+          # npm i --force
+          npm i
           npm run build
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
