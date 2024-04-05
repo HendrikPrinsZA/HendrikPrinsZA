@@ -1,6 +1,6 @@
-# [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0) <a href="https://www.gautamkrishnar.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
+# [Hi there, I'm Hendrik](https://www.youtube.com/watch?v=V-_O7nl0Ii0)
 
-![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](storage/images/badge-last-updated.svg)
+![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](public/assets/generated/badge-last-updated.svg)
 
 See interactive mode https://hendrikprinsloo.io
 
@@ -9,10 +9,10 @@ The stats below are based on a limited pool of data available from [github.com](
 <table cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td>
-      <image align="left" width="100%" src="storage/images/github-stats.svg" />
+      <image align="left" width="100%" src="public/assets/generated/github-stats.svg" />
     </td>
     <td>
-      <image align="left" width="100%" src="storage/images/github-top-lang.svg" />
+      <image align="left" width="100%" src="public/assets/generated/github-top-lang.svg" />
     </td>
   </tr>
 </table>
@@ -20,16 +20,18 @@ The stats below are based on a limited pool of data available from [github.com](
 <hr />
 
 # Language&nbsp;/&nbsp;Framework stats
+
 <a target="_blank" href="https://github.com/HendrikPrinsZA?tab=achievements">
-  <image align="left" width="100%" src="storage/images/github-trophees.svg" />
+  <image align="left" width="100%" src="public/assets/generated/github-trophees.svg" />
 </a>
 <a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
-  <image align="left" width="100%" src="storage/images/codersrank-graph.svg" />
+  <image align="left" width="100%" src="public/assets/generated/codersrank-graph.svg" />
 </a>
 
 <hr />
 
 # My last month
+
 <a href="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg">
     <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg" />
 </a>
@@ -37,7 +39,9 @@ The stats below are based on a limited pool of data available from [github.com](
 <hr />
 
 # Latest blog posts
+
 <!-- MEDIUM:START -->
+
 - [Fetching Tweets in Laravel With Python’s Social Networking Services Scraper](https://hendrikprinsza.medium.com/fetching-tweets-in-laravel-with-pythons-social-networking-services-scraper-c53db78c014e?source=rss-231421fdefe3------2)
 - [Trending Posts Related to PHP and Laravel in March 2023](https://hendrikprinsza.medium.com/trending-posts-related-to-php-and-laravel-in-march-2023-f640e5c97436?source=rss-231421fdefe3------2)
 - [Practical Guide: How to Build a Web Scraper with Laravel Actions](https://hendrikprinsza.medium.com/practical-guide-how-to-build-a-web-scraper-with-laravel-actions-63575c33df71?source=rss-231421fdefe3------2)
