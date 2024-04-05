@@ -1,8 +1,8 @@
 ---
-title: Initial post
+title: Post 2
 author: Hendrik Prinsloo
-pubDatetime: 2024-04-05T22:48:21.569Z
-slug: initial-post
+pubDatetime: 2024-04-04T23:03:21.569Z
+slug: post-2
 featured: true
 draft: false
 ogImage: /assets/forrest-gump-quote.webp
