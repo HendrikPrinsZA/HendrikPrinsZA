@@ -23,8 +23,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>About Me</h1>
-      <a
+      <!-- <h1>About Me</h1> -->
+      <!-- <a
         target="_blank"
         href="/rss.xml"
         class="rss-link"
@@ -39,29 +39,31 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path><circle cx="6" cy="18" r="2"></circle>
         </svg>
         <span class="sr-only">RSS Feed</span>
-      </a>
+      </a> -->
 
       <p>
-        Full Stack Developer who has mastered the ability to assist family and friends with anything remotely related to 
-        his field. Now also assumes the role of toaster mechanic, technical sales advisor, forgotten-password specialist,
-        and let-me-google-that-for-you expert.
+        Full Stack Developer who has mastered the ability to assist family and
+        friends with anything remotely related to his field. Now also assumes
+        the role of toaster mechanic, technical sales advisor,
+        forgotten-password specialist, and let-me-google-that-for-you expert.
       </p>
       <p>
-        Read the 
+        Feel free to
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
           href="/posts/"
         >
-        blog posts
-        </LinkButton> 
-        or check
+          steal this
+        </LinkButton>.
+      </p>
+      <p>
+        Read the
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/HendrikPrinsZA"
+          href="/posts/"
         >
-          README
-        </LinkButton> 
-        for more info.
+          blog posts
+        </LinkButton>
       </p>
       {
         // only display if at least one social link is enabled
