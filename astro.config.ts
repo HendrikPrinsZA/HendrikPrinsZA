@@ -6,15 +6,22 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  // site: SITE.website,
+  // site:
+  site: "https://hendrikprinsza.github.io",
+  base: "HendrikPrinsZA",
+  output: "server",
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
     react(),
     sitemap(),
+    svelte(),
   ],
   markdown: {
     remarkPlugins: [

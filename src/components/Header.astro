@@ -4,7 +4,7 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?: "posts" | "tags" | "about" | "search" | "gallery";
 }
 
 const { activeNav } = Astro.props;
@@ -60,33 +60,16 @@ const { activeNav } = Astro.props;
               Posts
             </a>
           </li>
-          <!-- <li>
-            <a href="/tags/" class={activeNav === "tags" ? "active" : ""}>
-              Tags
+          <li>
+            <a href="/gallery/" class={activeNav === "gallery" ? "active" : ""}>
+              Gallery
             </a>
-          </li> -->
-          <!-- <li>
-            <a href="/about/" class={activeNav === "about" ? "active" : ""}>
-              About
-            </a>
-          </li> -->
+          </li>
           <li>
             <a href="https://github.com/HendrikPrinsZA" target="_blank">
               README
             </a>
           </li>
-          <!-- <li>
-            <a
-              target="_blank"
-              href="/rss.xml"
-              class="rss-link"
-              aria-label="rss feed"
-              title="RSS Feed"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"><path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path><path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path><circle cx="6" cy="18" r="2"></circle></svg>
-              <span class="sr-only">RSS Feed</span>
-            </a>
-          </li> -->
           <li>
             <LinkButton
               href="/search/"
@@ -172,8 +155,13 @@ const { activeNav } = Astro.props;
   nav ul li:nth-last-child(2) {
     @apply col-span-1;
   }
-  nav a.active {
+  /* nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
+  } */
+  nav a.active {
+    /* @apply underline decoration-wavy decoration-2 underline-offset-4; */
+    /* color: red; */
+    color: var(--color-accent);
   }
   nav a.active svg {
     @apply fill-skin-accent;

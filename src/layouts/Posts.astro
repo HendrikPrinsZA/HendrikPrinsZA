@@ -11,10 +11,12 @@ import { SITE } from "@config";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  paginatedPosts: CollectionEntry<"posts">[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
+
+export const prerender = true;
 ---
 
 <Layout title={`Posts | ${SITE.title}`}>

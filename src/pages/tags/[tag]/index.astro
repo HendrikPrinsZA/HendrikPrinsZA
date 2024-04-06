@@ -6,7 +6,7 @@ import getPagination from "@utils/getPagination";
 import getUniqueTags from "@utils/getUniqueTags";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("posts");
 
   const tags = getUniqueTags(posts);
 
@@ -27,6 +27,9 @@ const pagination = getPagination({
   page: 1,
   isIndex: true,
 });
+
+// We need to prerender, limited support for markdown with Astro (some docs somewhere)
+export const prerender = true;
 ---
 
 <TagPosts {...pagination} {tag} {tagName} />
