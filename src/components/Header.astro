@@ -155,8 +155,13 @@ const { activeNav } = Astro.props;
   nav ul li:nth-last-child(2) {
     @apply col-span-1;
   }
-  nav a.active {
+  /* nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
+  } */
+  nav a.active {
+    /* @apply underline decoration-wavy decoration-2 underline-offset-4; */
+    /* color: red; */
+    color: var(--color-accent);
   }
   nav a.active svg {
     @apply fill-skin-accent;

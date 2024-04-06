@@ -36,6 +36,9 @@ const pagination = getPagination({
   posts: sortedPosts,
   page: slug,
 });
+
+// We need to prerender, limited support for markdown with Astro (some docs somewhere)
+export const prerender = true;
 ---
 
 {post ? <PostDetails post={post} /> : <Posts {...pagination} />}

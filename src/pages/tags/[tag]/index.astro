@@ -27,6 +27,9 @@ const pagination = getPagination({
   page: 1,
   isIndex: true,
 });
+
+// We need to prerender, limited support for markdown with Astro (some docs somewhere)
+export const prerender = true;
 ---
 
 <TagPosts {...pagination} {tag} {tagName} />

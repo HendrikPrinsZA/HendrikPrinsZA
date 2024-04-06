@@ -3,12 +3,14 @@ import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 import { SITE } from "@config";
 import Main from "@layouts/Main.astro";
-import Collections from "@components/gallery/Collections.svelte";
+import CollectionPhotos from "@components/gallery/CollectionPhotos.svelte";
+
+const { slug } = Astro.params;
 ---
 
 <Layout title={`Gallery | ${SITE.title}`}>
   <Header activeNav="gallery" />
   <Main>
-    <Collections client:load />
+    <CollectionPhotos client:load slug={slug} />
   </Main>
 </Layout>

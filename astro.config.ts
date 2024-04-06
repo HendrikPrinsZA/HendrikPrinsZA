@@ -11,6 +11,7 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  output: "server",
   integrations: [
     tailwind({
       applyBaseStyles: false,
