@@ -9,8 +9,8 @@ import Gallery from "@components/gallery/Gallery.svelte";
 const posts = await getCollection("blog");
 ---
 
-<Layout title={`Tags | ${SITE.title}`}>
-  <Header activeNav="tags" />
+<Layout title={`Gallery | ${SITE.title}`}>
+  <Header activeNav="gallery" />
   <Gallery client:load />
   <Footer />
 </Layout>

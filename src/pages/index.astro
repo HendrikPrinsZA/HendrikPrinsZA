@@ -56,15 +56,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           steal this
         </LinkButton>.
       </p>
-      <p>
-        Read the
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="/posts/"
-        >
-          blog posts
-        </LinkButton>
-      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
