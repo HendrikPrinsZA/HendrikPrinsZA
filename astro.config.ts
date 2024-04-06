@@ -10,7 +10,10 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  // site: SITE.website,
+  // site:
+  site: "https://hendrikprinsza.github.io",
+  base: "HendrikPrinsZA",
   output: "server",
   integrations: [
     tailwind({
