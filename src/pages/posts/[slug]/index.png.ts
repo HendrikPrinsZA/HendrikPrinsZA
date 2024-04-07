@@ -21,3 +21,5 @@ export const GET: APIRoute = async ({ props }) =>
       headers: { "Content-Type": "image/png" },
     }
   );
+
+export const prerender = true;

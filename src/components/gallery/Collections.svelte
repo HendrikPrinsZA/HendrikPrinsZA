@@ -4,9 +4,11 @@
   import { collections, fetchCollections } from '../../stores/galleryStore';
   import CollectionPreview from './CollectionPreview.svelte';
 
-  onMount(async () => {
-    await fetchCollections()
-  })
+  // onMount(async () => {
+  //   await fetchCollections();
+  // })
+  
+  fetchCollections();
 </script>
 <ul>
   {#each Object.values($collections) as collection}

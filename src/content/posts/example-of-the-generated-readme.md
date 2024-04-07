@@ -16,7 +16,7 @@ description: Some sample data
 
 # [Hi there, I'm Ron Burgandy](https://www.youtube.com/watch?v=V-_O7nl0Ii0)
 
-![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](/public/assets/generated/badge-last-updated.svg)
+![Profile Views](https://komarev.com/ghpvc/?username=HendrikPrinsZA) ![Last Updated Badge](/assets/generated/badge-last-updated.svg)
 
 See live site at [ronburgandy.com](#) ENV:PUBLIC_HOME_URL
 
@@ -25,10 +25,10 @@ The stats below are based on a limited pool of data available from [github.com](
 <table cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td>
-      <image align="left" width="100%" src="/public/assets/generated/github-stats.svg" />
+      <image align="left" width="100%" src="/assets/generated/github-stats.svg" alt="GitHub stats" />
     </td>
     <td>
-      <image align="left" width="100%" src="/public/assets/generated/github-top-lang.svg" />
+      <image align="left" width="100%" src="/assets/generated/github-top-lang.svg" alt="GitHub top languages" />
     </td>
   </tr>
 </table>
@@ -38,10 +38,10 @@ The stats below are based on a limited pool of data available from [github.com](
 # Language&nbsp;/&nbsp;Framework stats
 
 <a target="_blank" href="https://github.com/HendrikPrinsZA?tab=achievements">
-  <image align="left" width="100%" src="/public/assets/generated/github-trophees.svg" />
+  <image align="left" width="100%" src="/assets/generated/github-trophees.svg" alt="GitHub trophees" />
 </a>
 <a target="_blank" href="https://profile.codersrank.io/user/hendrikprinsza">
-  <image align="left" width="100%" src="/public/assets/generated/codersrank-graph.svg" />
+  <image align="left" width="100%" src="/assets/generated/codersrank-graph.svg" alt="Codersrank graph" />
 </a>
 
 <hr />
@@ -49,7 +49,7 @@ The stats below are based on a limited pool of data available from [github.com](
 # My last month
 
 <a href="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg">
-    <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg" />
+  <image align="left" width="100%" src="https://wakatime.com/share/@HendrikPrinsZA/adc2aaf6-c136-4e88-8010-0666eacecf71.svg" alt="Wakatime chart"/>
 </a>
 
 <hr />

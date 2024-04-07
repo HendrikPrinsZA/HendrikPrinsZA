@@ -7,14 +7,12 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import svelte from "@astrojs/svelte";
 
-import cloudflare from "@astrojs/cloudflare";
-
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   // site: "https://hendrikprinsza.github.io",
   // base: "HendrikPrinsZA",
-  output: "server",
+  // output: "server",
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -44,5 +42,4 @@ export default defineConfig({
     },
   },
   scopedStyleStrategy: "where",
-  adapter: cloudflare(),
 });

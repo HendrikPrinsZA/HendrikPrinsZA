@@ -5,6 +5,18 @@ import { SITE } from "@config";
 import Main from "@layouts/Main.astro";
 import CollectionPhotos from "@components/gallery/CollectionPhotos.svelte";
 
+// Should make this dynamic with SSR
+export async function getStaticPaths() {
+  return [
+    { params: { slug: "0X3G269rE_Y" } },
+    { params: { slug: "rHNfEWvbRes" } },
+    { params: { slug: "3mScrwx4ZpA" } },
+    { params: { slug: "QLfo7DmU-vY" } },
+    { params: { slug: "KObrLBFgMHA" } },
+    { params: { slug: "lUYWpP6x1_E" } },
+  ];
+}
+
 const { slug } = Astro.params;
 ---
 
