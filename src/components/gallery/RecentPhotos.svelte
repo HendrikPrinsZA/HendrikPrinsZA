@@ -23,7 +23,7 @@
 </script>
 
 <div class="pswp-gallery grid grid-cols-4 md:grid-cols-4 gap-4 mt-10" id="home-gallery">
-  {#each Object.values(localRecentPhotos) as recentPhoto}
+  {#each Object.values($recentPhotos) as recentPhoto}
 		<a
 			href={recentPhoto.urls.full}
 			data-pswp-width={recentPhoto.width}
