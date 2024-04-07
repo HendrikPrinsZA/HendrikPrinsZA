@@ -53,9 +53,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
     <section id="gallery">
-      <HeaderLink href="/gallery/" title="Gallery" />
       <RecentPhotos client:load />
     </section>
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts">
+          <HeaderLink href="/posts/" title="Posts" />
+          <ul>
+            {recentPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/posts/${slug}/`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
 
     {
       recentPosts.length > 0 && (

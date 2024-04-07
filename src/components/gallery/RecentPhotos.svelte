@@ -23,6 +23,7 @@
 </script>
 
 <div class="pswp-gallery grid grid-cols-4 md:grid-cols-4 gap-4 mt-10" id="home-gallery">
+  <!-- <a href="https://unsplash.com/@hendrikprinsza" target="_blank" class="group inline-block hover:text-skin-accent underline decoration-dashed underline-offset-4 hover:text-skin-accent astro-j7pv25f6">More</a> -->
   {#each Object.values($recentPhotos) as recentPhoto}
 		<a
 			href={recentPhoto.urls.full}
