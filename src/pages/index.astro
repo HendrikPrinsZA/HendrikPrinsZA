@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
+import HeaderLink from "@components/base/HeaderLink.svelte";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
@@ -9,6 +10,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 
 const posts = await getCollection("posts");
 
@@ -50,9 +52,33 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     </section>
 
     <Hr />
+    <section id="gallery">
+      <HeaderLink href="/gallery/" title="Gallery" />
+      <RecentPhotos client:load />
+    </section>
 
     {
-      featuredPosts.length > 0 && (
+      recentPosts.length > 0 && (
+        <section id="recent-posts">
+          <HeaderLink href="/posts/" title="Posts" />
+          <ul>
+            {recentPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/posts/${slug}/`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      false && featuredPosts.length > 0 && (
         <>
           <section id="featured">
             <h2>Featured</h2>
@@ -72,7 +98,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
 
     {
-      recentPosts.length > 0 && (
+      false && recentPosts.length > 0 && (
         <section id="recent-posts">
           <h2>Recent Posts</h2>
           <ul>

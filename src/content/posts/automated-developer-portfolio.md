@@ -1,5 +1,6 @@
 ---
 title: Automated Developer Portfolio
+subtitle: (IDEA) Add support for subtitles
 author: Hendrik Prinsloo
 pubDatetime: 2024-04-06T01:12:10.569Z
 slug: automated-developer-portfolio
@@ -13,15 +14,18 @@ tags:
 description: Automated developer porfolio by integrating with some services to showcase skills and experience in realtime
 ---
 
-Automated developer porfolio with support for stats from [GitHub](https://github.com/), [WakaTime](https://wakatime.com/), [CodersRank](https://codersrank.io/), and more.
-
-This will be a living project that will grow organically as features and optimisations are added.
+Developer portfolio that integrates with some popular services to automatically keep your portfolio up to date.
 
 ## Features
 
-- [Astro](https://astro.build/) with [AstroPaper theme](https://github.com/satnaing/astro-paper)
-- Workflow to update the REAMDE.md with the latest stats from [GitHub](https://github.com/), [WakaTime](https://wakatime.com/), [CodersRank](https://codersrank.io/), [Medium](https://medium.com/), and more.
-- Gallery integrated with [Unsplash](https://unsplash.com/)
+- Personal README that fetches stats from [WakaTime](https://wakatime.com), [CodersRank](https://codersrank.io), and [GitHub](https://github.com). See [example](/posts/example-of-the-generated-readme).
+- Gallery that shows collections and photos from [Unsplash](https://unsplash.com), see [example](/gallery).
+
+### Coming soon
+
+- Generate posts from [Medium](https://medium.com)
+- Generate projects from [GitHub](https://github.com)
+- Generate career history from [LinkedIn](https://linkedin.com)
 
 ## Getting started
 
@@ -66,8 +70,48 @@ Keeping it simple is important as we have quite a lot of interdependencies. The 
 
 ## Roadmap
 
-- Generate blog posts from [Medium](https://medium.com/)
-- Generate projects from [GitHub](https://github.com/)
+- Generate blog posts from [Medium](https://medium.com)
+- Generate projects from [GitHub](https://github.com)
 - Zero to self-hosted on GitHub pages in 1 click: fork
 - Add support for Astro DB
 - Convert realtime operations to database operations based on async jobs. For example, workflow to fetch the latest public repositories from GitHub once a week.
+
+### In progress
+
+- Generate projects from [GitHub](https://github.com)
+- Generate posts from [Medium](https://medium.com)
+
+### In the future
+
+- Generate career history from [LinkedIn](https://developer.linkedin.com)
+- ...
+
+## Integrations
+
+- [GitHub](https://github.com)
+- [WakaTime](https://wakatime.com)
+- [CodersRank](https://codersrank.io)
+- [Medium](https://medium.com)
+- [Unsplash](https://unsplash.com)
+
+### In the future
+
+- [Spotify](https://developer.spotify.com/documentation/web-api)
+- [Strava](https://developers.strava.com)
+- [LinkedIn](https://developer.linkedin.com)
+- ...
+
+## Technologies
+
+- [Astro](https://astro.build) with [AstroPaper theme](https://github.com/satnaing/astro-paper)
+- [Svelte](https://svelte.dev)
+- [React](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Google Analytics](https://analytics.google.com)
+- [Google Tag Manager](https://tagmanager.google.com)
+- [GitHub Actions](https://github.com/features/actions)
+
+### In the future
+
+- [Astro DB](https://docs.astro.build/en/guides/astro-db)
+- ...
