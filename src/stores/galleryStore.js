@@ -13,21 +13,21 @@ export async function fetchPhotos() {
   for (let i = 0; i < resultPhotos.length; i++) {
     const photoId = resultPhotos[i].id;
     photos.setKey(photoId, resultPhotos[i]);
+  }
+}
 
-    // const photo = {
-    //   title: `Photo ${photoId}`,
-    //   width: resultPhotos[i].width,
-    //   height: resultPhotos[i].height,
-    //   links: {
-    //     html: resultPhotos[i].links.html,
-    //   },
-    //   urls: {
-    //     full: resultPhotos[i].urls.full,
-    //     regular: resultPhotos[i].urls.regular,
-    //     thumb: resultPhotos[i].urls.thumb,
-    //   },
-    // };
-    // photos.setKey(photoId, photo);
+/** @type {import('nanostores').MapStore<Record<string, Object>>} */
+export const recentPhotos = map({});
+export async function fetchRecentPhotos(limit = 10) {
+  const result = await unsplash.users.getPhotos({
+    username: "HendrikPrinsZA",
+    perPage: limit,
+  });
+  const resultPhotos = result?.response?.results ?? [];
+
+  for (let i = 0; i < resultPhotos.length; i++) {
+    const photoId = resultPhotos[i].id;
+    recentPhotos.setKey(photoId, resultPhotos[i]);
   }
 }
 
@@ -35,21 +35,6 @@ export async function fetchPhotos() {
 export const collections = map({});
 export async function fetchCollections() {
   const result = await unsplash.users.getCollections({
-    username: "HendrikPrinsZA",
-  });
-  const resultCollections = result?.response?.results ?? [];
-
-  for (let i = 0; i < resultCollections.length; i++) {
-    const slug = resultCollections[i].id;
-    resultCollections[i]["fetched_photos"] = [];
-    collections.setKey(slug, resultCollections[i]);
-  }
-}
-
-/** @type {import('nanostores').MapStore<Record<string, Object>>} */
-export const recent = map({});
-export async function fetchRecentPhotos() {
-  const result = await unsplash.users.getPhotos({
     username: "HendrikPrinsZA",
   });
   const resultCollections = result?.response?.results ?? [];

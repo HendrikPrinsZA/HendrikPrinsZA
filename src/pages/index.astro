@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 
 const posts = await getCollection("posts");
 
@@ -50,6 +51,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     </section>
 
     <Hr />
+    <section>
+      <h2>Recent photos</h2>
+      <RecentPhotos client:load />
+    </section>
 
     {
       featuredPosts.length > 0 && (
@@ -135,8 +140,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #recent-posts {
     @apply pb-6 pt-12;
   }
-  #featured h2,
-  #recent-posts h2 {
+  h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {

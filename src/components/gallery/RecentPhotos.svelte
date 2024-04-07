@@ -1,26 +1,38 @@
 <script>
   import { onMount } from 'svelte';
-	import 'photoswipe/style.css';
-  import { collections, fetchCollections } from '../../stores/galleryStore';
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import { recentPhotos, fetchRecentPhotos } from '../../stores/galleryStore';
   import CollectionPreview from './CollectionPreview.svelte';
+	import 'photoswipe/style.css';
 
+  let localRecentPhotos = [];
   onMount(async () => {
-    await fetchCollections()
+    let lightbox = new PhotoSwipeLightbox({
+			gallery: '#home-gallery',
+			children: 'a',
+			pswpModule: () => import('photoswipe'),
+		});
+
+    recentPhotos.subscribe((state) => {
+      localRecentPhotos = localRecentPhotos;
+      lightbox.init();
+    });
+
+    await fetchRecentPhotos(12)
   })
 </script>
-<ul>
-  {#each Object.values($collections) as collection}
-    <li class="my-6">
-      <a
-        class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-        href="/gallery/{collection.id}"
-      >
-        <h2 class="text-lg font-medium decoration-dashed hover:underline">{collection.title}</h2>
-      </a>
-      {#if collection.description} 
-        <p><i>{collection.description}</i></p>
-      {/if}
-      <CollectionPreview {collection} />
-    </li>
+
+<div class="pswp-gallery grid grid-cols-4 md:grid-cols-4 gap-4 mt-10" id="home-gallery">
+  {#each Object.values($recentPhotos) as recentPhoto}
+		<a
+			href={recentPhoto.urls.full}
+			data-pswp-width={recentPhoto.width}
+			data-pswp-height={recentPhoto.height}
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img src={recentPhoto.urls.thumb} alt="" />
+		</a>
   {/each}
-</ul>
+</div>
+<p>See <a href="https://unsplash.com/@hendrikprinsza" target="_blank" class="group inline-block hover:text-skin-accent underline decoration-dashed underline-offset-4 hover:text-skin-accent astro-j7pv25f6">all photos</a></p>

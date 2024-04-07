@@ -4,6 +4,7 @@
   export let slug;
   import IntersectionObserver from "svelte-intersection-observer";
 
+  let element;
   let collection = {}
   onMount(async () => {
     collection = await getCollectionBySlug(slug, true);
@@ -11,8 +12,6 @@
 
   // Create a variable valled hasMore
   $: hasMore = collection.fetched_photos?.length < collection?.total_photos;
-
-  let element;
 </script>
 
 {#if collection.id}
