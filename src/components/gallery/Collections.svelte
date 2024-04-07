@@ -5,7 +5,7 @@
   import CollectionPreview from './CollectionPreview.svelte';
 
   onMount(async () => {
-    await fetchCollections();
+    await fetchCollections()
   })
 </script>
 <ul>
