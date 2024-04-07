@@ -12,6 +12,7 @@
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
   }
+  /* Original dark */
   /* html[data-theme="dark"] {
     --color-fill: 33, 39, 55;
     --color-text-base: 234, 237, 243;
@@ -47,7 +48,7 @@
     line-height: 1.5;
     word-wrap: break-word;
   }
-  section,
+  main>section,
   footer {
     @apply mx-auto max-w-3xl px-4;
   }

@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import PhotoSwipeLightbox from 'photoswipe/lightbox';
   import { recentPhotos, fetchRecentPhotos } from '../../stores/galleryStore';
-  import CollectionPreview from './CollectionPreview.svelte';
 	import 'photoswipe/style.css';
 
   let localRecentPhotos = [];
@@ -10,6 +9,7 @@
     let lightbox = new PhotoSwipeLightbox({
 			gallery: '#home-gallery',
 			children: 'a',
+      showHideAnimationType: 'zoom',
 			pswpModule: () => import('photoswipe'),
 		});
 
@@ -18,7 +18,7 @@
       lightbox.init();
     });
 
-    await fetchRecentPhotos(12)
+    await fetchRecentPhotos(8)
   })
 </script>
 
