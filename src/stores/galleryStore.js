@@ -2,12 +2,13 @@ import { map } from "nanostores";
 import { createApi } from "unsplash-js";
 
 const unsplashApiAccessKey = import.meta.env.PUBLIC_UNSPLASH_API_ACCESS_KEY;
+const unsplashUsername = import.meta.env.PUBLIC_UNSPLASH_USERNAME;
 const unsplash = createApi({ accessKey: unsplashApiAccessKey });
 
 /** @type {import('nanostores').MapStore<Record<string, Object>>} */
 export const photos = map({});
 export async function fetchPhotos() {
-  const result = await unsplash.users.getPhotos({ username: "HendrikPrinsZA" });
+  const result = await unsplash.users.getPhotos({ username: unsplashUsername });
   const resultPhotos = result?.response?.results ?? [];
 
   for (let i = 0; i < resultPhotos.length; i++) {
@@ -20,8 +21,9 @@ export async function fetchPhotos() {
 export const recentPhotos = map({});
 export async function fetchRecentPhotos(limit = 10) {
   const result = await unsplash.users.getPhotos({
-    username: "HendrikPrinsZA",
+    username: unsplashUsername,
     perPage: limit,
+    orientation: "landscape",
   });
   const resultPhotos = result?.response?.results ?? [];
 
@@ -35,7 +37,7 @@ export async function fetchRecentPhotos(limit = 10) {
 export const collections = map({});
 export async function fetchCollections() {
   const result = await unsplash.users.getCollections({
-    username: "HendrikPrinsZA",
+    username: unsplashUsername,
   });
   const resultCollections = result?.response?.results ?? [];
 
