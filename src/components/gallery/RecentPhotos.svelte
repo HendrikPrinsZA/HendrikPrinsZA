@@ -35,4 +35,3 @@
 		</a>
   {/each}
 </div>
-<p>See <a href="https://unsplash.com/@hendrikprinsza" target="_blank" class="group inline-block hover:text-skin-accent underline decoration-dashed underline-offset-4 hover:text-skin-accent astro-j7pv25f6">all photos</a></p>
