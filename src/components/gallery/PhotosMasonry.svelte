@@ -9,7 +9,6 @@
   const unsplashUsername = import.meta.env.PUBLIC_UNSPLASH_USERNAME;
   const unsplash = createApi({ accessKey: unsplashApiAccessKey });
 
-  let localRecentPhotos = [];
   let lightbox;
   onMount(async () => {
     lightbox = new PhotoSwipeLightbox({
@@ -23,7 +22,7 @@
   async function fetch_photos() {
     const result = await unsplash.users.getPhotos({ 
       username: unsplashUsername,
-      perPage: 30
+      perPage: 30,
     });
 
     setTimeout(() => lightbox && lightbox.init(), 150)
@@ -35,7 +34,7 @@
 {#await fetch_photos()}
   <p>Loading data...</p>
 {:then files}
-  <Masonry items={files} let:item idKey="id" minColWidth={100} class="home-gallery" animate="true">
+  <Masonry items={files} let:item idKey="id" gap={10} minColWidth={110} class="home-gallery" animate="true">
     <a
 			href={item.urls.full}
 			data-pswp-width={item.width}
