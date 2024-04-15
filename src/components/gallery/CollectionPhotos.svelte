@@ -13,7 +13,6 @@
   // Create a variable valled hasMore
   $: hasMore = collection.fetched_photos?.length < collection?.total_photos;
 </script>
-
 {#if collection.id}
 <a
   class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
