@@ -36,7 +36,7 @@ export default () => {
           borderRadius: "4px",
           display: "flex",
           justifyContent: "center",
-          margin: "2rem",
+          margin: "1rem",
           width: "88%",
           height: "80%",
         }}

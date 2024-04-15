@@ -142,8 +142,10 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    /* margin-top: 24px; */
+    /* margin-bottom: 16px; */
+    margin-top: 12px;
+    margin-bottom: 8px;
     font-weight: var(--base-text-weight-semibold, 600);
     line-height: 1.25;
   }
