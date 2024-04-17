@@ -6,10 +6,6 @@ See live site at https://hendrikprinsloo.co.za
 
 The stats below are based on a limited pool of data available from [github.com](https://github.com), [wakatime.com](https://wakatime.com), and [codersrank.io](https://codersrank.io).
 
-## Read these
-
-- https://scottspence.com/posts/sveltekit-page-reaction-component-with-upstash-redis
-
 <table cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td>
