@@ -51,7 +51,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.1.1",
-    "eslint-plugin-astro": "^0.31.3",
+    "eslint-plugin-astro": "^1.2.0",
     "husky": "^9.0.11",
     "image-downloader": "^4.3.0",
     "lint-staged": "^15.2.0",
