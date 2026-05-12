@@ -6,10 +6,12 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import svelte from "@astrojs/svelte";
 
+import vue from "@astrojs/vue";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [react(), sitemap(), svelte()],
+  integrations: [react(), sitemap(), svelte(), vue()],
   markdown: {
     remarkPlugins: [
       remarkToc,
