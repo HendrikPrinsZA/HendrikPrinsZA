@@ -1,13 +1,11 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Posts from "@layouts/Posts.astro";
-import PostDetails from "@layouts/PostDetails.astro";
-import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
 import getSortedProjects from "@utils/getSortedProjects";
 import ProjectDetails from "@layouts/ProjectDetails.astro";
 import Projects from "@layouts/Projects.astro";
+import { getContentSlug } from "@utils/getContentSlug";
 
 export interface Props {
   project: CollectionEntry<"projects">;
@@ -17,7 +15,7 @@ export async function getStaticPaths() {
   const projects = await getCollection("projects", ({ data }) => !data.draft);
 
   const postResult = projects.map(project => ({
-    params: { slug: project.slug },
+    params: { slug: getContentSlug(project) },
     props: { project },
   }));
 
