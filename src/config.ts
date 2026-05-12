@@ -31,39 +31,9 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
-    name: "Facebook",
-    href: "https://facebook.com/HendrikPrinsZA",
-    linkTitle: `${SITE.title} on Facebook`,
-    active: false,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/hendrikprinslooza/",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/hendrikprinsza/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
-  {
-    name: "Mail",
-    href: "mailto:johndoe@example.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
-  },
-  {
     name: "Twitter",
     href: "https://twitter.com/HendrikPrinsZA",
     linkTitle: `${SITE.title} on Twitter`,
     active: true,
-  },
-  {
-    name: "Reddit",
-    href: "https://www.reddit.com/user/HendrikPrinsZA/",
-    linkTitle: `${SITE.title} on Reddit`,
-    active: false,
   },
 ];

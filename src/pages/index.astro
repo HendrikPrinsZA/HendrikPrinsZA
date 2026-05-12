@@ -9,14 +9,41 @@ import Card from "@components/Card";
 // import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 // import { SOCIALS } from "@config";
-import PhotosMasonry from "@components/gallery/PhotosMasonry.svelte";
+import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
+import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
+
+type UnsplashPhoto = {
+  id: string;
+  width: number;
+  height: number;
+  alt_description?: string | null;
+  description?: string | null;
+  urls: {
+    full: string;
+    thumb: string;
+  };
+};
 
 const posts = await getCollection("posts");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+await fetchRecentPhotos(8);
+const recentPhotoItems = Object.values(
+  recentPhotos.get() as Record<string, UnsplashPhoto>
+).map(photo => ({
+  id: photo.id,
+  width: photo.width,
+  height: photo.height,
+  alt: photo.alt_description ?? photo.description ?? "",
+  urls: {
+    full: photo.urls.full,
+    thumb: photo.urls.thumb,
+  },
+}));
 
 // const socialCount = SOCIALS.filter(social => social.active).length;
 const showFeaturedPosts = false;
@@ -47,18 +74,11 @@ const showFeaturedPosts = false;
     <Hr />
     <section id="gallery">
       <h2>Recent photos</h2>
-      <PhotosMasonry client:load />
+      <RecentPhotos photos={recentPhotoItems} client:load />
     </section>
 
     <div class="all-posts-btn-wrapper">
-      <LinkButton href="/gallery/">
-        Gallery
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
+      <LinkButton href="/gallery/" showArrow={true}>Gallery</LinkButton>
     </div>
 
     {
@@ -102,14 +122,7 @@ const showFeaturedPosts = false;
     }
 
     <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
+      <LinkButton href="/posts/" showArrow={true}>All Posts</LinkButton>
     </div>
   </main>
 
