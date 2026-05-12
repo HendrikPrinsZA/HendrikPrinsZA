@@ -22,7 +22,7 @@
   async function fetch_photos() {
     const result = await unsplash.users.getPhotos({
       username: unsplashUsername,
-      perPage: 30,
+      perPage: 10,
     });
 
     setTimeout(() => lightbox && lightbox.init(), 150);
@@ -37,7 +37,7 @@
   <Masonry
     items={files}
     idKey="id"
-    gap={10}
+    gap={2}
     minColWidth={110}
     class="home-gallery"
     animate={true}

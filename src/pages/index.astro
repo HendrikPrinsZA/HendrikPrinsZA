@@ -6,9 +6,9 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
+// import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS } from "@config";
+// import { SOCIALS } from "@config";
 import PhotosMasonry from "@components/gallery/PhotosMasonry.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
 
@@ -18,7 +18,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+// const socialCount = SOCIALS.filter(social => social.active).length;
 const showFeaturedPosts = false;
 ---
 
@@ -26,6 +26,7 @@ const showFeaturedPosts = false;
   <Header />
   <main id="main-content">
     <section id="hero">
+      <p>A collection of thoughts, opinions, and unfinished drafts.</p>
       <!-- <p>
         Full Stack Developer who has mastered the ability to assist family and
         friends with anything remotely related to his field. Now also assumes
@@ -41,20 +42,11 @@ const showFeaturedPosts = false;
           steal this
         </LinkButton>.
       </p> -->
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
     </section>
 
     <Hr />
     <section id="gallery">
-      <h2>Recent potos</h2>
+      <h2>Recent photos</h2>
       <PhotosMasonry client:load />
     </section>
 
