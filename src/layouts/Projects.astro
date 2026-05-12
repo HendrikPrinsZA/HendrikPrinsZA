@@ -7,6 +7,7 @@ import Footer from "@components/Footer.astro";
 import Pagination from "@components/Pagination.astro";
 import Card from "@components/Card";
 import { SITE } from "@config";
+import { getContentSlug } from "@utils/getContentSlug";
 
 export interface Props {
   currentPage: number;
@@ -24,8 +25,11 @@ export const prerender = true;
   <Main>
     <ul>
       {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/projects/${slug}/`} frontmatter={data} />
+        paginatedPosts.map(project => (
+          <Card
+            href={`/projects/${getContentSlug(project)}/`}
+            frontmatter={project.data}
+          />
         ))
       }
     </ul>

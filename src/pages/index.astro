@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
-import HeaderLink from "@components/base/HeaderLink.svelte";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
@@ -10,8 +9,8 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
-import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import PhotosMasonry from "@components/gallery/PhotosMasonry.svelte";
+import { getContentSlug } from "@utils/getContentSlug";
 
 const posts = await getCollection("posts");
 
@@ -20,19 +19,20 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+const showFeaturedPosts = false;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <p>
+      <!-- <p>
         Full Stack Developer who has mastered the ability to assist family and
         friends with anything remotely related to his field. Now also assumes
         the role of toaster mechanic, technical sales advisor,
         forgotten-password specialist, and let-me-google-that-for-you expert.
-      </p>
-      <p>
+      </p> -->
+      <!-- <p>
         Feel free to
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
@@ -40,7 +40,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         >
           steal this
         </LinkButton>.
-      </p>
+      </p> -->
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -75,11 +75,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <h2>Recent posts</h2>
           <ul>
             {recentPosts.map(
-              ({ data, slug }, index) =>
+              (post, index) =>
                 index < 4 && (
                   <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
+                    href={`/posts/${getContentSlug(post)}/`}
+                    frontmatter={post.data}
                     secHeading={false}
                   />
                 )
@@ -90,15 +90,15 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
 
     {
-      false && featuredPosts.length > 0 && (
+      showFeaturedPosts && featuredPosts.length > 0 && (
         <>
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
+              {featuredPosts.map(post => (
                 <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
+                  href={`/posts/${getContentSlug(post)}/`}
+                  frontmatter={post.data}
                   secHeading={false}
                 />
               ))}

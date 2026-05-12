@@ -64,6 +64,6 @@ export const SOCIALS: SocialObjects = [
     name: "Reddit",
     href: "https://www.reddit.com/user/HendrikPrinsZA/",
     linkTitle: `${SITE.title} on Reddit`,
-    active: true,
+    active: false,
   },
 ];
