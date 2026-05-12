@@ -39,14 +39,15 @@
 </div>
 
 {#if hasMore}
-  <button
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 text-center"
+  <LinkButton 
+    href="/gallery/" 
+    showArrow={true}
     on:click={async () => {
       collection = await fetchCollectionPhotosMore(collection.id);
     }}
   >
-    Load More
-  </button>
+    Gallery
+  </LinkButton>
 {/if}  
 
 <IntersectionObserver {element} on:intersect={async (e) => { collection = await fetchCollectionPhotosMore(collection.id);}}>
