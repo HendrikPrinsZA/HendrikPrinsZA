@@ -1,26 +1,10 @@
 ---
-
+import Layout from "@layouts/Layout.astro";
+import FakeYoutube from "@components/tmp/FakeYoutube.vue";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Niel Highlights</title>
-    <style>
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-      }
-
-      body {
-        background-image: url("/assets/tmp/spining.gif");
-        background-repeat: repeat;
-      }
-    </style>
-  </head>
-  <body>
-    <audio src="/assets/tmp/spinning.wav" autoplay loop></audio>
-  </body>
-</html>
+<Layout title="Highlights 2026-06-12">
+  <div class="h-screen w-screen">
+    <FakeYoutube client:load />
+  </div>
+</Layout>
