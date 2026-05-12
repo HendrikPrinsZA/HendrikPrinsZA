@@ -118,7 +118,7 @@ function play() {
 .spinning-stage {
     min-height: 100vh;
     width: 100vw;
-    background-image: url("/assets/tmp/spining.gif");
+    background-image: url("/assets/tmp/spinning.gif");
     background-repeat: repeat;
 }
 
