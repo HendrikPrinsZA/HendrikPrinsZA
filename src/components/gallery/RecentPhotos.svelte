@@ -19,7 +19,10 @@
   });
 </script>
 
-<div class="pswp-gallery grid grid-cols-4 md:grid-cols-4 gap-4 mt-10" id="home-gallery">
+<div
+  class="pswp-gallery mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+  id="home-gallery"
+>
   {#each photos as recentPhoto (recentPhoto.id)}
     <a
       href={recentPhoto.urls.full}
@@ -27,12 +30,16 @@
       data-pswp-height={recentPhoto.height}
       target="_blank"
       rel="noopener noreferrer"
+      class="group block overflow-hidden rounded-lg"
     >
       <img
         src={recentPhoto.urls.thumb}
         alt={recentPhoto.alt ?? ""}
         width={recentPhoto.width}
         height={recentPhoto.height}
+        loading="lazy"
+        decoding="async"
+        class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
       />
     </a>
   {/each}

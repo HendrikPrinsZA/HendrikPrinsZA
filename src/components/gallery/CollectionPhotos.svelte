@@ -40,7 +40,7 @@
   <p>{ collection.description }</p>
 {/if}
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
+<div class="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2">
   {#each collection.fetched_photos ?? [] as photo (photo.id)}
     <a href="{photo.links.html}" target="_blank" rel="noopener noreferrer">
       <img

@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getContentSlug } from "@utils/getContentSlug";
+
+export interface Props {
+  projects: CollectionEntry<"projects">[];
+  limit?: number;
+}
+
+const { projects, limit } = Astro.props;
+const items = limit === undefined ? projects : projects.slice(0, limit);
+---
+
+<ul class="project-list">
+  {
+    items.map(project => (
+      <li class="project-item">
+        <a href={`/projects/${getContentSlug(project)}/`} class="project-link">
+          <h3 class="project-title">{project.data.title}</h3>
+        </a>
+        <p class="project-description">{project.data.description}</p>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .project-list {
+    @apply list-none space-y-4 p-0;
+  }
+  .project-item {
+    @apply rounded-lg border border-transparent px-3 py-3 transition-colors duration-200 -mx-3 hover:border-skin-line hover:bg-skin-card hover:bg-opacity-30;
+  }
+  .project-title {
+    @apply text-base font-medium text-skin-accent decoration-dashed hover:underline;
+  }
+  .project-description {
+    @apply mt-1 text-sm opacity-90;
+  }
+</style>

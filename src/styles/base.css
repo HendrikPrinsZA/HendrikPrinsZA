@@ -49,6 +49,7 @@
     word-wrap: break-word;
   }
   main > section,
+  main > .page-section,
   footer {
     @apply mx-auto max-w-3xl px-4;
   }

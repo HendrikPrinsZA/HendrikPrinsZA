@@ -45,10 +45,21 @@ const isExternalHttp =
       <slot />
 
       {showArrow && (
-        <svg xmlns="http://www.w3.org/2000/svg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
           <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
         </svg>
       )}
     </a>
   )
 }
+
+<style>
+  .arrow-icon {
+    @apply ml-0.5 inline-block transition-transform duration-200 group-hover:translate-x-0.5;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .arrow-icon {
+      @apply transition-none;
+    }
+  }
+</style>

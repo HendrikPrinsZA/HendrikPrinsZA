@@ -18,8 +18,11 @@ export const experience: ExperienceEntry[] = [
     end: "Present",
     url: "https://finstack.io",
     description:
-      "Finstack helps scale-ups speed up their month-end closing with its automated reporting, consolidation, and collaboration platform. No fuss, no complexity.",
-    highlights: [],
+      "Leading engineering for Finstack's month-end closing platform — automated reporting, consolidation, and collaboration for scale-ups.",
+    highlights: [
+      "Own technical direction, architecture, and delivery across the product",
+      "Guide the team on platform reliability, performance, and developer experience",
+    ],
   },
   {
     company: "Finstack",
@@ -29,8 +32,11 @@ export const experience: ExperienceEntry[] = [
     end: "Mar 2024",
     url: "https://finstack.io",
     description:
-      "Finstack helps scale-ups speed up their month-end closing with its automated reporting, consolidation, and collaboration platform. No fuss, no complexity.",
-    highlights: [],
+      "Built core features for Finstack's reporting and consolidation platform, working remotely with a distributed team.",
+    highlights: [
+      "Delivered reporting workflows and data consolidation features end to end",
+      "Improved application performance and code quality across the stack",
+    ],
   },
   {
     company: "Vesper",

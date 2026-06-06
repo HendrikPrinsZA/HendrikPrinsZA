@@ -5,13 +5,13 @@ author: Hendrik Prinsloo
 pubDatetime: 2024-04-06T01:12:10.569Z
 slug: automated-developer-portfolio
 featured: false
-draft: false
+draft: true
 tags:
   - Developer Portfolio
   - Automation
   - Astro
   - GitHub Actions
-description: Automated developer porfolio by integrating with some services to showcase skills and experience in realtime
+description: Automated developer portfolio by integrating with some services to showcase skills and experience in realtime
 ---
 
 Developer portfolio that integrates with some popular services to automatically keep your portfolio up to date.
