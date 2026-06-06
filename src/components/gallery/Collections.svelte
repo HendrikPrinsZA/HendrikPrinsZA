@@ -6,6 +6,8 @@
 
   onMount(async () => {
     await fetchCollections()
+
+    console.log($collections)
   })
 </script>
 <ul>
