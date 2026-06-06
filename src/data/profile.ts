@@ -3,7 +3,7 @@ export const profile = {
   title: "Technical Lead",
   location: "Amsterdam, Netherlands",
   tagline: "A collection of thoughts, opinions, and unfinished drafts.",
-  bio: `Full stack developer who has mastered the ability of assisting family and friends with anything remotely related to his field. Now also assumes the role of toaster mechanic, technical sales advisor, forgotten-password specialist, and let-me-google-that-for-you expert. Passionate about development and obsessed with optimising inefficiencies and automating redundancies.`,
+  bio: `Full stack developer who has mastered the ability of assisting family and friends with anything remotely related to his field. Now also assumes the role of toaster mechanic, technical sales advisor, forgotten-password specialist, and let-me-google-that-for-you expert.`,
   careerStart: 2013,
   objective: `Aspire to play a positive part in the augmented intelligence revolution, becoming a regular contributor in the open source community and cultivating a trustworthy online footprint. Maintain a hands-on role in the development environment and stay up-to-date with the latest trends in the industry.`,
   technologies: [

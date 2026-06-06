@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Technical lead based in Amsterdam, Netherlands. Passionate about development and obsessed with optimising inefficiencies and automating redundancies.
+Technical lead based in Amsterdam, Netherlands.
 
 My career started in 2013 as a software developer at Customer Loyalty Consultants, an insurance service solutions provider focused on efficiency, accuracy, and compliance in critical business systems.
 
