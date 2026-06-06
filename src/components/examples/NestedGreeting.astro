@@ -1,0 +1,28 @@
+---
+import Panel from "./Panel.astro";
+
+export interface Props {
+  recipient: string;
+}
+
+const { recipient } = Astro.props;
+const builtAt = new Date().toISOString();
+---
+
+<Panel title="Nested Astro component" variant="accent">
+  <p>
+    Hello, <strong>{recipient}</strong>! This entire tree is static HTML — props
+    flow in at build/request time, and no client bundle is needed.
+  </p>
+  <p class="meta">Rendered at <code>{builtAt}</code></p>
+  <Fragment slot="footer"> Pure Astro · zero JavaScript shipped </Fragment>
+</Panel>
+
+<style>
+  .meta {
+    @apply mt-3 text-sm opacity-70;
+  }
+  .meta code {
+    @apply rounded bg-skin-card px-1 text-xs;
+  }
+</style>

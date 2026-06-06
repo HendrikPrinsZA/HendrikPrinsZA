@@ -1,0 +1,65 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import { cosmicBodies } from "@data/examples";
+---
+
+<ExamplesLayout
+  title="Cosmic Transitions"
+  description="Click a cosmic body and watch it morph into its detail view via Astro View Transitions."
+>
+  <SectionHeading title="Pick a cosmic body" />
+
+  <p class="lede">
+    Shared elements with matching <code>transition:name</code> attributes animate
+    smoothly between routes. Astro's <code>ClientRouter</code> handles the rest.
+  </p>
+
+  <ul class="cosmic-grid">
+    {
+      cosmicBodies.map(body => (
+        <li>
+          <a
+            href={`/examples/transitions/${body.slug}/`}
+            class="cosmic-card"
+            style={`--body-color: ${body.color}`}
+          >
+            <span class="cosmic-emoji" transition:name={body.transitionName}>
+              {body.emoji}
+            </span>
+            <span
+              class="cosmic-name"
+              transition:name={`${body.transitionName}-label`}
+            >
+              {body.name}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</ExamplesLayout>
+
+<style>
+  .lede {
+    @apply mb-8 text-sm leading-relaxed opacity-85;
+  }
+  .lede code {
+    @apply rounded bg-skin-card px-1 text-xs;
+  }
+  .cosmic-grid {
+    @apply grid list-none gap-4 p-0 sm:grid-cols-3;
+  }
+  .cosmic-card {
+    @apply flex flex-col items-center rounded-xl border border-skin-line
+    bg-skin-card bg-opacity-20 p-8 text-center transition-colors
+    hover:border-skin-accent hover:bg-opacity-40;
+  }
+  .cosmic-emoji {
+    @apply text-6xl;
+    view-transition-name: var(--vt-name, none);
+  }
+  .cosmic-name {
+    @apply mt-4 text-lg font-semibold;
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+export interface Props {
+  title: string;
+  variant?: "default" | "accent";
+}
+
+const { title, variant = "default" } = Astro.props;
+---
+
+<section class:list={["panel", variant === "accent" && "panel--accent"]}>
+  <h3 class="panel-title">{title}</h3>
+  <div class="panel-body">
+    <slot />
+  </div>
+  {
+    Astro.slots.has("footer") && (
+      <footer class="panel-footer">
+        <slot name="footer" />
+      </footer>
+    )
+  }
+</section>
+
+<style>
+  .panel {
+    @apply rounded-xl border border-skin-line bg-skin-card bg-opacity-20 p-5;
+  }
+  .panel--accent {
+    @apply border-skin-accent border-opacity-40;
+  }
+  .panel-title {
+    @apply text-sm font-semibold uppercase tracking-wider text-skin-accent;
+  }
+  .panel-body {
+    @apply mt-3;
+  }
+  .panel-footer {
+    @apply mt-4 border-t border-skin-line pt-3 text-xs opacity-60;
+  }
+</style>

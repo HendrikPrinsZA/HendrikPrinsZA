@@ -1,0 +1,30 @@
+---
+const serverTime = new Date();
+const formatted = serverTime.toLocaleString("en-GB", {
+  dateStyle: "full",
+  timeStyle: "long",
+});
+---
+
+<div class="time-card server">
+  <p class="time-label">Server-rendered</p>
+  <p class="time-value">{formatted}</p>
+  <p class="time-note">
+    Baked in at request time. No JavaScript required to display this.
+  </p>
+</div>
+
+<style>
+  .time-card {
+    @apply rounded-xl border border-skin-line bg-skin-card bg-opacity-20 p-5;
+  }
+  .time-label {
+    @apply text-xs font-semibold uppercase tracking-wider text-skin-accent;
+  }
+  .time-value {
+    @apply mt-3 font-mono text-lg;
+  }
+  .time-note {
+    @apply mt-2 text-sm opacity-70;
+  }
+</style>

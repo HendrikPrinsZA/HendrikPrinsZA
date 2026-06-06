@@ -1,0 +1,47 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import { cosmicBodies } from "@data/examples";
+
+export function getStaticPaths() {
+  return cosmicBodies.map(body => ({
+    params: { slug: body.slug },
+    props: { body },
+  }));
+}
+
+const { body } = Astro.props;
+---
+
+<ExamplesLayout title={body.name} description={body.fact} hidePageTitle>
+  <article class="cosmic-detail" style={`--body-color: ${body.color}`}>
+    <span class="cosmic-emoji" transition:name={body.transitionName}>
+      {body.emoji}
+    </span>
+    <h1 class="cosmic-title" transition:name={`${body.transitionName}-label`}>
+      {body.name}
+    </h1>
+    <p class="cosmic-fact">{body.fact}</p>
+    <p class="cosmic-hint">
+      Hit back — the emoji and title will morph back to the grid.
+    </p>
+  </article>
+</ExamplesLayout>
+
+<style>
+  .cosmic-detail {
+    @apply flex flex-col items-center py-8 text-center;
+  }
+  .cosmic-emoji {
+    @apply text-8xl;
+  }
+  .cosmic-title {
+    @apply mt-6 text-3xl font-bold;
+    color: var(--body-color);
+  }
+  .cosmic-fact {
+    @apply mt-4 max-w-md text-base leading-relaxed opacity-85;
+  }
+  .cosmic-hint {
+    @apply mt-8 text-sm italic opacity-60;
+  }
+</style>

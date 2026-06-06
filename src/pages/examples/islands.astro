@@ -1,0 +1,87 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import ClickCounter from "@components/examples/ClickCounter";
+import MoodRing from "@components/examples/MoodRing.svelte";
+import GreetingCard from "@components/examples/GreetingCard.vue";
+---
+
+<ExamplesLayout
+  title="Island Party"
+  description="React, Svelte, and Vue on one page — each hydrating on its own schedule."
+>
+  <SectionHeading title="Three frameworks, one party" />
+
+  <p class="lede">
+    Astro renders everything as static HTML first. Interactive pieces — called
+    <em>islands</em> — hydrate independently using different
+    <code>client:*</code> directives.
+  </p>
+
+  <div class="island-grid">
+    <ClickCounter client:load />
+    <MoodRing client:visible />
+    <GreetingCard client:idle />
+  </div>
+
+  <div class="legend">
+    <h3>Client directives used</h3>
+    <dl>
+      <div>
+        <dt><code>client:load</code></dt>
+        <dd>Hydrate immediately — good for above-the-fold UI.</dd>
+      </div>
+      <div>
+        <dt><code>client:visible</code></dt>
+        <dd>Hydrate when the element scrolls into view.</dd>
+      </div>
+      <div>
+        <dt><code>client:idle</code></dt>
+        <dd>Hydrate when the browser main thread is free.</dd>
+      </div>
+    </dl>
+  </div>
+</ExamplesLayout>
+
+<style>
+  .lede {
+    @apply mb-8 text-sm leading-relaxed opacity-85;
+  }
+  .lede code {
+    @apply rounded bg-skin-card px-1 text-xs;
+  }
+  .island-grid {
+    @apply grid gap-5 sm:grid-cols-3;
+  }
+  .legend {
+    @apply mt-10 rounded-xl border border-skin-line bg-skin-card bg-opacity-10 p-5;
+  }
+  .legend h3 {
+    @apply text-sm font-semibold;
+  }
+  .legend dl {
+    @apply mt-3 space-y-3;
+  }
+  .legend dt {
+    @apply font-mono text-sm text-skin-accent;
+  }
+  .legend dd {
+    @apply mt-0.5 text-sm opacity-75;
+  }
+  :global(.island-card) {
+    @apply rounded-xl border border-skin-line bg-skin-card bg-opacity-20 p-5;
+  }
+  :global(.island-label) {
+    @apply text-xs font-semibold uppercase tracking-wider text-skin-accent;
+  }
+  :global(.island-desc) {
+    @apply mt-1 text-sm opacity-70;
+  }
+  :global(.count-display) {
+    @apply my-4 text-5xl font-bold tabular-nums;
+  }
+  :global(.island-btn) {
+    @apply rounded-lg border border-skin-accent px-4 py-2 text-sm font-medium
+    text-skin-accent transition-colors hover:bg-skin-accent hover:text-skin-inverted;
+  }
+</style>

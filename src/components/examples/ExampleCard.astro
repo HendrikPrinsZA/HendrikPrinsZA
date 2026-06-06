@@ -1,0 +1,48 @@
+---
+import type { Example } from "@data/examples";
+
+export interface Props {
+  example: Example;
+}
+
+const { example } = Astro.props;
+---
+
+<a href={`/examples/${example.slug}/`} class="example-card group">
+  <span class="emoji" aria-hidden="true">{example.emoji}</span>
+  <h2 class="title">{example.title}</h2>
+  <p class="tagline">{example.tagline}</p>
+  <p class="description">{example.description}</p>
+  <ul class="highlights">
+    {example.highlights.map(highlight => <li>{highlight}</li>)}
+  </ul>
+  <span class="cta">Explore →</span>
+</a>
+
+<style>
+  .example-card {
+    @apply block rounded-xl border border-skin-line bg-skin-card bg-opacity-20 p-6
+    transition-all duration-200 hover:border-skin-accent hover:bg-opacity-40;
+  }
+  .emoji {
+    @apply text-4xl;
+  }
+  .title {
+    @apply mt-3 text-xl font-semibold group-hover:text-skin-accent;
+  }
+  .tagline {
+    @apply mt-1 text-sm italic opacity-70;
+  }
+  .description {
+    @apply mt-3 text-sm leading-relaxed opacity-85;
+  }
+  .highlights {
+    @apply mt-4 flex list-none flex-wrap gap-2 p-0;
+  }
+  .highlights li {
+    @apply rounded-full border border-skin-line px-2.5 py-0.5 text-xs opacity-80;
+  }
+  .cta {
+    @apply mt-5 inline-block text-sm font-medium text-skin-accent;
+  }
+</style>

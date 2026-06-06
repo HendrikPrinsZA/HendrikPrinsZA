@@ -1,0 +1,58 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import QuoteFetcher from "@components/examples/QuoteFetcher.svelte";
+---
+
+<ExamplesLayout
+  title="API Playground"
+  description="Poke Astro API routes and watch JSON responses flow back."
+>
+  <SectionHeading title="Endpoints in your pages folder" />
+
+  <p class="lede">
+    Astro API routes live alongside your pages. Drop a <code>.ts</code> file in
+    <code>src/pages/api/</code> and export HTTP method handlers — no Express required.
+  </p>
+
+  <QuoteFetcher client:load />
+
+  <div class="endpoints">
+    <h3>Available endpoints</h3>
+    <ul>
+      <li>
+        <a href="/api/examples/quote/" target="_blank">
+          <code>GET /api/examples/quote/</code>
+        </a>
+        — random dev quote
+      </li>
+      <li>
+        <a href="/api/examples/color/" target="_blank">
+          <code>GET /api/examples/color/</code>
+        </a>
+        — random named colour
+      </li>
+    </ul>
+  </div>
+</ExamplesLayout>
+
+<style>
+  .lede {
+    @apply mb-8 text-sm leading-relaxed opacity-85;
+  }
+  .lede code {
+    @apply rounded bg-skin-card px-1 text-xs;
+  }
+  .endpoints {
+    @apply mt-10 rounded-xl border border-skin-line bg-skin-card bg-opacity-10 p-5;
+  }
+  .endpoints h3 {
+    @apply text-sm font-semibold;
+  }
+  .endpoints ul {
+    @apply mt-3 list-none space-y-2 p-0 text-sm;
+  }
+  .endpoints code {
+    @apply font-mono text-skin-accent;
+  }
+</style>
