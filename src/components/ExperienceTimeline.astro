@@ -1,0 +1,71 @@
+---
+import type { ExperienceEntry } from "@data/experience";
+
+export interface Props {
+  entries: ExperienceEntry[];
+  limit?: number;
+}
+
+const { entries, limit } = Astro.props;
+const items = limit ? entries.slice(0, limit) : entries;
+---
+
+<ul class="experience-list">
+  {
+    items.map(entry => (
+      <li class="experience-item">
+        <div class="experience-meta">
+          <span class="experience-dates">
+            {entry.start} — {entry.end}
+          </span>
+          <span class="experience-location">{entry.location}</span>
+        </div>
+        <h3 class="experience-role">{entry.role}</h3>
+        <p class="experience-company">
+          {entry.url ? (
+            <a href={entry.url} target="_blank" rel="noopener noreferrer">
+              {entry.company}
+            </a>
+          ) : (
+            entry.company
+          )}
+        </p>
+        <p class="experience-description">{entry.description}</p>
+        {entry.highlights.length > 0 && (
+          <ul class="experience-highlights">
+            {entry.highlights.map(highlight => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .experience-list {
+    @apply list-none space-y-8 p-0;
+  }
+  .experience-item {
+    @apply border-l-2 border-skin-accent pl-5;
+  }
+  .experience-meta {
+    @apply mb-1 flex flex-wrap gap-x-3 text-sm opacity-70;
+  }
+  .experience-role {
+    @apply text-lg font-medium;
+  }
+  .experience-company {
+    @apply mb-2 text-skin-accent;
+  }
+  .experience-company a {
+    @apply hover:underline;
+  }
+  .experience-description {
+    @apply mb-3;
+  }
+  .experience-highlights {
+    @apply list-disc space-y-1 pl-5 text-sm opacity-90;
+  }
+</style>

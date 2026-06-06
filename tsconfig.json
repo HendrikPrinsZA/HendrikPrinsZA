@@ -5,6 +5,7 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
+      "@data/*": ["data/*"],
       "@components/*": ["components/*"],
       "@content/*": ["content/*"],
       "@layouts/*": ["layouts/*"],

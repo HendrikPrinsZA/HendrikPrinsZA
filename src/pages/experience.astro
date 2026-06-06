@@ -1,0 +1,51 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import ExperienceTimeline from "@components/ExperienceTimeline.astro";
+import EducationList from "@components/EducationList.astro";
+import EventList from "@components/EventList.astro";
+import { experience } from "@data/experience";
+import { education } from "@data/education";
+import { events } from "@data/events";
+import { SITE } from "@config";
+---
+
+<Layout title={`Experience | ${SITE.title}`}>
+  <Header activeNav="experience" />
+  <main id="main-content">
+    <section class="page-section">
+      <h1 class="page-title">Experience</h1>
+      <p class="page-desc">Career history, education, and conferences.</p>
+    </section>
+
+    <section class="page-section">
+      <SectionHeading title="Career" />
+      <ExperienceTimeline entries={experience} />
+    </section>
+
+    <section class="page-section">
+      <SectionHeading title="Education" />
+      <EducationList entries={education} />
+    </section>
+
+    <section id="conferences" class="page-section">
+      <SectionHeading title="Conferences" />
+      <EventList entries={events} />
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page-section {
+    @apply pb-8 pt-6;
+  }
+  .page-title {
+    @apply text-3xl font-bold;
+  }
+  .page-desc {
+    @apply mt-2 opacity-80;
+  }
+</style>

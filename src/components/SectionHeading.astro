@@ -1,0 +1,16 @@
+---
+export interface Props {
+  title: string;
+  id?: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<h2 {id} class="section-heading">{title}</h2>
+
+<style>
+  .section-heading {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+</style>
