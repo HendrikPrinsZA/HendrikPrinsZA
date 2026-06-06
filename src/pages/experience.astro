@@ -10,18 +10,21 @@ import { experience } from "@data/experience";
 import { education } from "@data/education";
 import { events } from "@data/events";
 import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
 ---
 
 <Layout title={`Experience | ${SITE.title}`}>
   <Header activeNav="experience" />
+  <Breadcrumbs />
+
   <main id="main-content">
-    <section class="page-section">
+    <!-- <section class="page-section">
       <h1 class="page-title">Experience</h1>
       <p class="page-desc">Career history, education, and conferences.</p>
-    </section>
+    </section> -->
 
-    <section class="page-section">
-      <SectionHeading title="Career" />
+    <section class="page-section pt-8">
+      <!-- <SectionHeading title="Career" /> -->
       <ExperienceTimeline entries={experience} />
     </section>
 

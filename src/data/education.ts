@@ -21,7 +21,7 @@ export const education: EducationEntry[] = [
   },
   {
     institution: "Hoërskool Kempton Park",
-    degree: "Matric",
+    degree: "High School",
     location: "Gauteng, South Africa",
     start: "2005",
     end: "2009",
