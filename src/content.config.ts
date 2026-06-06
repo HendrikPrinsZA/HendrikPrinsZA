@@ -1,6 +1,6 @@
 import { SITE } from "@config";
 import { defineCollection } from "astro:content";
-import { z } from "zod";
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
 const posts = defineCollection({
