@@ -9,16 +9,13 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import SectionHeading from "@components/SectionHeading.astro";
 import ExperienceTimeline from "@components/ExperienceTimeline.astro";
-import EventList from "@components/EventList.astro";
 import ArticleList from "@components/ArticleList.astro";
-import TechTags from "@components/TechTags.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
 import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
 import { profile } from "@data/profile";
 import { experience } from "@data/experience";
-import { events } from "@data/events";
 import { articles } from "@data/articles";
 
 type UnsplashPhoto = {

@@ -72,7 +72,7 @@ export default function SearchBar({ searchList }: Props) {
     } else {
       history.replaceState(history.state, "", window.location.pathname);
     }
-  }, [inputVal]);
+  }, [inputVal, fuse]);
 
   return (
     <>

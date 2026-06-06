@@ -26,7 +26,7 @@
       data-pswp-width={recentPhoto.width}
       data-pswp-height={recentPhoto.height}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
     >
       <img
         src={recentPhoto.urls.thumb}

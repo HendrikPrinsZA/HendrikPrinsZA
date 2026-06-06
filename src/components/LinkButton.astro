@@ -16,6 +16,9 @@ const {
   disabled = false,
   showArrow = false,
 } = Astro.props;
+
+const isExternalHttp =
+  href.startsWith("http://") || href.startsWith("https://");
 ---
 
 {
@@ -34,6 +37,10 @@ const {
       class={`group inline-block hover:text-skin-accent ${className}`}
       aria-label={ariaLabel}
       title={title}
+      {...(isExternalHttp && {
+        rel: "noopener noreferrer",
+        target: "_blank",
+      })}
     >
       <slot />
 

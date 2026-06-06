@@ -13,6 +13,7 @@ module.exports = [
       "public/**",
       "dist/**",
       ".yarn/**",
+      "src/layouts/Layout.astro",
     ],
   },
   js.configs.recommended,

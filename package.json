@@ -97,7 +97,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx,json,astro}": [
-      "prettier --write --plugin=prettier-plugin-astro"
+      "prettier --write --plugin=prettier-plugin-astro",
+      "eslint --fix"
     ]
   }
 }

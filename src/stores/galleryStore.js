@@ -3,11 +3,23 @@ import { createApi } from "unsplash-js";
 
 const unsplashApiAccessKey = import.meta.env.PUBLIC_UNSPLASH_API_ACCESS_KEY;
 const unsplashUsername = import.meta.env.PUBLIC_UNSPLASH_USERNAME;
-const unsplash = createApi({ accessKey: unsplashApiAccessKey });
+
+if (!unsplashApiAccessKey || !unsplashUsername) {
+  console.warn(
+    "Unsplash gallery is disabled: set PUBLIC_UNSPLASH_API_ACCESS_KEY and PUBLIC_UNSPLASH_USERNAME."
+  );
+}
+
+const unsplash = createApi({ accessKey: unsplashApiAccessKey ?? "" });
+
+function isUnsplashConfigured() {
+  return Boolean(unsplashApiAccessKey && unsplashUsername);
+}
 
 /** @type {import('nanostores').MapStore<Record<string, Object>>} */
 export const photos = map({});
 export async function fetchPhotos() {
+  if (!isUnsplashConfigured()) return;
   const result = await unsplash.users.getPhotos({ username: unsplashUsername });
   const resultPhotos = result?.response?.results ?? [];
 
@@ -20,6 +32,7 @@ export async function fetchPhotos() {
 /** @type {import('nanostores').MapStore<Record<string, Object>>} */
 export const recentPhotos = map({});
 export async function fetchRecentPhotos(limit = 10) {
+  if (!isUnsplashConfigured()) return;
   const result = await unsplash.users.getPhotos({
     username: unsplashUsername,
     perPage: limit,
@@ -36,6 +49,7 @@ export async function fetchRecentPhotos(limit = 10) {
 /** @type {import('nanostores').MapStore<Record<string, Object>>} */
 export const collections = map({});
 export async function fetchCollections() {
+  if (!isUnsplashConfigured()) return;
   const result = await unsplash.users.getCollections({
     username: unsplashUsername,
   });

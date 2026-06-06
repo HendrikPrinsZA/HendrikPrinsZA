@@ -18,6 +18,7 @@
   class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
   href="{collection.links.html}"
   target="_blank"
+  rel="noopener noreferrer"
 >
   <h1 class="text-lg font-medium decoration-dashed hover:underline">{collection.title}</h1>
 </a>
@@ -28,7 +29,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
   {#each Object.values(collection.fetched_photos) as photo}
-    <a href="{photo.links.html}" target="_blank">
+    <a href="{photo.links.html}" target="_blank" rel="noopener noreferrer">
       <img
         class="h-auto max-w-full rounded-lg"
         src={photo.urls.regular}
