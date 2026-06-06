@@ -11,6 +11,10 @@ const { title, id } = Astro.props;
 
 <style>
   .section-heading {
-    @apply text-2xl font-semibold tracking-wide;
+    @apply mb-6 text-2xl font-semibold tracking-tight;
+  }
+  .section-heading::after {
+    content: "";
+    @apply mt-3 block h-px w-12 bg-skin-accent opacity-40;
   }
 </style>

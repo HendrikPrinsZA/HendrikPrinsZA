@@ -225,7 +225,7 @@ const { activeNav } = Astro.props;
 </style>
 
 <script>
-  let navAbortController;
+  let navAbortController: AbortController | undefined;
 
   function setupNavToggle() {
     navAbortController?.abort();

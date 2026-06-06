@@ -4,7 +4,7 @@ author: Hendrik Prinsloo
 pubDatetime: 2024-04-06T01:12:10.569Z
 slug: example-of-the-generated-readme
 featured: false
-draft: false
+draft: true
 tags:
   - Developer Portfolio
   - Automation

@@ -1,8 +1,12 @@
 import { map } from "nanostores";
 import { createApi } from "unsplash-js";
+import {
+  PUBLIC_UNSPLASH_API_ACCESS_KEY,
+  PUBLIC_UNSPLASH_USERNAME,
+} from "astro:env/client";
 
-const unsplashApiAccessKey = import.meta.env.PUBLIC_UNSPLASH_API_ACCESS_KEY;
-const unsplashUsername = import.meta.env.PUBLIC_UNSPLASH_USERNAME;
+const unsplashApiAccessKey = PUBLIC_UNSPLASH_API_ACCESS_KEY;
+const unsplashUsername = PUBLIC_UNSPLASH_USERNAME;
 
 if (!unsplashApiAccessKey || !unsplashUsername) {
   console.warn(
@@ -13,19 +17,38 @@ if (!unsplashApiAccessKey || !unsplashUsername) {
 const unsplash = createApi({ accessKey: unsplashApiAccessKey ?? "" });
 const PHOTOS_PER_PAGE = 10;
 
+type GalleryPhoto = {
+  id: string;
+  title?: string;
+  width: number;
+  height: number;
+  links?: { html: string };
+  urls: {
+    full: string;
+    regular?: string;
+    thumb: string;
+  };
+};
+
+type GalleryCollection = {
+  id: string;
+  total_photos: number;
+  fetched_photos?: GalleryPhoto[];
+  [key: string]: unknown;
+};
+
 function isUnsplashConfigured() {
   return Boolean(unsplashApiAccessKey && unsplashUsername);
 }
 
-function mapPhoto(resultPhoto) {
+function mapPhoto(resultPhoto: GalleryPhoto): GalleryPhoto {
   const photoId = resultPhoto.id;
   return {
+    ...resultPhoto,
     id: photoId,
     title: `Photo ${photoId}`,
-    width: resultPhoto.width,
-    height: resultPhoto.height,
     links: {
-      html: resultPhoto.links.html,
+      html: resultPhoto.links?.html ?? "",
     },
     urls: {
       full: resultPhoto.urls.full,
@@ -35,7 +58,10 @@ function mapPhoto(resultPhoto) {
   };
 }
 
-function updateCollectionPhotos(collectionSlug, newPhotos) {
+function updateCollectionPhotos(
+  collectionSlug: string,
+  newPhotos: GalleryPhoto[]
+): GalleryCollection {
   const lookup = collections.get();
   const collection = lookup[collectionSlug];
   const fetched_photos = [...(collection.fetched_photos ?? []), ...newPhotos];
@@ -44,12 +70,13 @@ function updateCollectionPhotos(collectionSlug, newPhotos) {
   return updated;
 }
 
-/** @type {import('nanostores').MapStore<Record<string, Object>>} */
-export const photos = map({});
+export const photos = map<Record<string, GalleryPhoto>>({});
 export async function fetchPhotos() {
   if (!isUnsplashConfigured()) return;
-  const result = await unsplash.users.getPhotos({ username: unsplashUsername });
-  const resultPhotos = result?.response?.results ?? [];
+  const result = await unsplash.users.getPhotos({
+    username: unsplashUsername!,
+  });
+  const resultPhotos = (result?.response?.results ?? []) as GalleryPhoto[];
 
   for (let i = 0; i < resultPhotos.length; i++) {
     const photoId = resultPhotos[i].id;
@@ -57,16 +84,15 @@ export async function fetchPhotos() {
   }
 }
 
-/** @type {import('nanostores').MapStore<Record<string, Object>>} */
-export const recentPhotos = map({});
+export const recentPhotos = map<Record<string, GalleryPhoto>>({});
 export async function fetchRecentPhotos(limit = 10) {
   if (!isUnsplashConfigured()) return;
   const result = await unsplash.users.getPhotos({
-    username: unsplashUsername,
+    username: unsplashUsername!,
     perPage: limit,
     orientation: "landscape",
   });
-  const resultPhotos = result?.response?.results ?? [];
+  const resultPhotos = (result?.response?.results ?? []) as GalleryPhoto[];
 
   for (let i = 0; i < resultPhotos.length; i++) {
     const photoId = resultPhotos[i].id;
@@ -74,28 +100,28 @@ export async function fetchRecentPhotos(limit = 10) {
   }
 }
 
-/** @type {import('nanostores').MapStore<Record<string, Object>>} */
-export const collections = map({});
+export const collections = map<Record<string, GalleryCollection>>({});
 export async function fetchCollections() {
   if (!isUnsplashConfigured()) return;
   const result = await unsplash.users.getCollections({
-    username: unsplashUsername,
+    username: unsplashUsername!,
   });
-  const resultCollections = result?.response?.results ?? [];
+  const resultCollections = (result?.response?.results ??
+    []) as unknown as GalleryCollection[];
 
   for (let i = 0; i < resultCollections.length; i++) {
     const slug = resultCollections[i].id;
-    resultCollections[i]["fetched_photos"] = [];
+    resultCollections[i].fetched_photos = [];
     collections.setKey(slug, resultCollections[i]);
   }
 }
 
 export async function getCollectionBySlug(
-  collectionSlug,
+  collectionSlug: string,
   prefetchPhotos = false
-) {
+): Promise<GalleryCollection> {
   if (!collectionSlug) {
-    return {};
+    return {} as GalleryCollection;
   }
 
   const slug = collectionSlug;
@@ -117,10 +143,12 @@ export async function getCollectionBySlug(
   return collections.get()[slug];
 }
 
-export async function fetchCollectionPhotos(collectionSlug) {
+export async function fetchCollectionPhotos(
+  collectionSlug: string
+): Promise<GalleryCollection> {
   const collection = await getCollectionBySlug(collectionSlug);
 
-  if (collection.fetched_photos?.length > 0) {
+  if ((collection.fetched_photos?.length ?? 0) > 0) {
     return collection;
   }
 
@@ -128,27 +156,29 @@ export async function fetchCollectionPhotos(collectionSlug) {
     collectionId: collection.id,
     perPage: PHOTOS_PER_PAGE,
   });
-  const resultPhotos = result?.response?.results ?? [];
+  const resultPhotos = (result?.response?.results ?? []) as GalleryPhoto[];
 
   return updateCollectionPhotos(collectionSlug, resultPhotos.map(mapPhoto));
 }
 
-export async function fetchCollectionPhotosMore(collectionSlug) {
+export async function fetchCollectionPhotosMore(
+  collectionSlug: string
+): Promise<GalleryCollection> {
   const collection = await getCollectionBySlug(collectionSlug);
 
-  if (collection.fetched_photos?.length >= collection.total_photos) {
+  if ((collection.fetched_photos?.length ?? 0) >= collection.total_photos) {
     return collection;
   }
 
   const page =
-    Math.floor(collection.fetched_photos.length / PHOTOS_PER_PAGE) + 1;
+    Math.floor((collection.fetched_photos?.length ?? 0) / PHOTOS_PER_PAGE) + 1;
 
   const result = await unsplash.collections.getPhotos({
     collectionId: collection.id,
     perPage: PHOTOS_PER_PAGE,
     page,
   });
-  const resultPhotos = result?.response?.results ?? [];
+  const resultPhotos = (result?.response?.results ?? []) as GalleryPhoto[];
 
   if (resultPhotos.length === 0) {
     return collection;

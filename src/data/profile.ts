@@ -2,6 +2,8 @@ export const profile = {
   name: "Hendrik Prinsloo",
   title: "Technical Lead",
   location: "Amsterdam, Netherlands",
+  headline:
+    "Technical lead and full stack developer building reliable platforms for scale-ups.",
   tagline: "A collection of thoughts, opinions, and unfinished drafts.",
   bio: `Full stack developer who has mastered the ability of assisting family and friends with anything remotely related to his field. Now also assumes the role of toaster mechanic, technical sales advisor, forgotten-password specialist, and let-me-google-that-for-you expert.`,
   careerStart: 2013,

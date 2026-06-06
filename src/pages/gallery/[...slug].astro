@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import { SITE } from "@config";
 import Main from "@layouts/Main.astro";
 import CollectionPhotos from "@components/gallery/CollectionPhotos.svelte";
-import { collections, fetchCollections } from "../../stores/galleryStore";
+import { collections, fetchCollections } from "@stores/galleryStore";
 
 export async function getStaticPaths() {
   await fetchCollections();

@@ -48,7 +48,7 @@ const items = limit === undefined ? entries : entries.slice(0, limit);
     @apply list-none space-y-8 p-0;
   }
   .experience-item {
-    @apply border-l-2 border-skin-accent pl-5;
+    @apply border-l-2 border-skin-accent border-opacity-60 pl-5 transition-[border-color] duration-300 hover:border-opacity-100;
   }
   .experience-meta {
     @apply mb-1 flex flex-wrap gap-x-3 text-sm opacity-70;

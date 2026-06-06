@@ -8,6 +8,7 @@ interface DatetimesProps {
 interface Props extends DatetimesProps {
   size?: "sm" | "lg";
   className?: string;
+  showTime?: boolean;
 }
 
 export default function Datetime({
@@ -15,6 +16,7 @@ export default function Datetime({
   modDatetime,
   size = "sm",
   className,
+  showTime = true,
 }: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
@@ -39,13 +41,18 @@ export default function Datetime({
         <FormattedDatetime
           pubDatetime={pubDatetime}
           modDatetime={modDatetime}
+          showTime={showTime}
         />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
+const FormattedDatetime = ({
+  pubDatetime,
+  modDatetime,
+  showTime = true,
+}: DatetimesProps & { showTime?: boolean }) => {
   const myDatetime = new Date(
     modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime
   );
@@ -64,9 +71,13 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   return (
     <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      <span className="text-nowrap">{time}</span>
+      {showTime && (
+        <>
+          <span aria-hidden="true"> | </span>
+          <span className="sr-only">&nbsp;at&nbsp;</span>
+          <span className="text-nowrap">{time}</span>
+        </>
+      )}
     </>
   );
 };

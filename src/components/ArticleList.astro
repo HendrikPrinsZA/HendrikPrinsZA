@@ -34,7 +34,7 @@ const items = limit === undefined ? entries : entries.slice(0, limit);
     @apply list-none space-y-4 p-0;
   }
   .article-item {
-    @apply border-b border-skin-line pb-4 last:border-b-0 last:pb-0;
+    @apply rounded-lg border border-transparent px-3 py-3 transition-colors duration-200 -mx-3 hover:border-skin-line hover:bg-skin-card hover:bg-opacity-30;
   }
   .article-title {
     @apply text-base font-medium text-skin-accent decoration-dashed hover:underline;

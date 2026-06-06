@@ -8,10 +8,13 @@ import Card from "@components/Card";
 import SectionHeading from "@components/SectionHeading.astro";
 import ExperienceTimeline from "@components/ExperienceTimeline.astro";
 import ArticleList from "@components/ArticleList.astro";
+import ProjectList from "@components/ProjectList.astro";
+import FadeIn from "@components/FadeIn.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import getSortedProjects from "@utils/getSortedProjects";
 import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
-import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
+import { fetchRecentPhotos, recentPhotos } from "@stores/galleryStore";
 import { profile } from "@data/profile";
 import { experience } from "@data/experience";
 import { articles } from "@data/articles";
@@ -34,7 +37,10 @@ const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-await fetchRecentPhotos(8);
+const projects = await getCollection("projects");
+const sortedProjects = getSortedProjects(projects);
+
+await fetchRecentPhotos(16);
 const recentPhotoItems = Object.values(
   recentPhotos.get() as Record<string, UnsplashPhoto>
 ).map(photo => ({
@@ -57,63 +63,82 @@ const recentPhotoItems = Object.values(
   <Header />
   <main id="main-content">
     <section id="hero">
-      <p>{profile.bio}</p>
+      <FadeIn>
+        <p class="hero-headline">{profile.headline}</p>
+        <p class="hero-bio">{profile.bio}</p>
+      </FadeIn>
+      <FadeIn delay={200}>
+        <RecentPhotos photos={recentPhotoItems} client:visible />
+        <div class="section-link">
+          <LinkButton href="/gallery/" showArrow={true}>Gallery</LinkButton>
+        </div>
+      </FadeIn>
     </section>
 
-    <section id="gallery">
-      <SectionHeading title="Photos" />
-      <RecentPhotos photos={recentPhotoItems} client:load />
-      <div class="section-link">
-        <LinkButton href="/gallery/" showArrow={true}>Gallery</LinkButton>
-      </div>
+    <section id="career">
+      <FadeIn delay={50}>
+        <SectionHeading title="Career" />
+        <ExperienceTimeline entries={experience} limit={2} />
+        <div class="section-link">
+          <LinkButton href="/career/" showArrow={true}>
+            Full career
+          </LinkButton>
+        </div>
+      </FadeIn>
     </section>
 
-    <section id="experience">
-      <SectionHeading title="Experience" />
-      <ExperienceTimeline entries={experience} limit={2} />
-      <div class="section-link">
-        <LinkButton href="/career/" showArrow={true}>
-          Full experience
-        </LinkButton>
-      </div>
+    <section id="projects">
+      <FadeIn delay={100}>
+        <SectionHeading title="Projects" />
+        <ProjectList projects={sortedProjects} limit={4} />
+        <div class="section-link">
+          <LinkButton href="/projects/" showArrow={true}>
+            All projects
+          </LinkButton>
+        </div>
+      </FadeIn>
     </section>
 
     <section id="writing">
-      <SectionHeading title="Writing" />
-      <ArticleList entries={articles} limit={3} />
-      <div class="section-link">
-        <LinkButton href="https://medium.com/@hendrikprinsza" showArrow={true}>
-          All articles on Medium
-        </LinkButton>
-      </div>
+      <FadeIn delay={150}>
+        <SectionHeading title="Writing" />
+        <ArticleList entries={articles} limit={3} />
+        <div class="section-link">
+          <LinkButton
+            href="https://medium.com/@hendrikprinsza"
+            showArrow={true}
+          >
+            All articles on Medium
+          </LinkButton>
+        </div>
+      </FadeIn>
     </section>
 
     {
       recentPosts.length > 0 && (
-        <>
-          <section id="recent-posts">
+        <section id="recent-posts">
+          <FadeIn delay={250}>
             <SectionHeading title="Recent posts" />
-            {recentPosts.length > 0 && (
-              <ul>
-                {recentPosts.map(
-                  (post, index) =>
-                    index < 4 && (
-                      <Card
-                        href={`/posts/${getContentSlug(post)}/`}
-                        frontmatter={post.data}
-                        secHeading={false}
-                      />
-                    )
-                )}
-              </ul>
-            )}
+            <ul>
+              {recentPosts.map(
+                (post, index) =>
+                  index < 4 && (
+                    <Card
+                      href={`/posts/${getContentSlug(post)}/`}
+                      frontmatter={post.data}
+                      secHeading={false}
+                      showTime={false}
+                    />
+                  )
+              )}
+            </ul>
             <div class="section-link">
               <LinkButton href="/posts/" showArrow={true}>
                 All posts
               </LinkButton>
             </div>
-          </section>
-        </>
+          </FadeIn>
+        </section>
       )
     }
   </main>
@@ -123,22 +148,37 @@ const recentPhotoItems = Object.values(
 
 <style>
   #hero {
-    @apply pb-6 pt-8;
+    @apply border-skin-line pb-10 pt-8;
   }
   #hero h1 {
-    @apply text-3xl font-bold sm:text-4xl;
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
   }
   .hero-subtitle {
-    @apply text-skin-accent;
+    @apply mt-1 text-lg text-skin-accent;
   }
-  #hero p {
-    @apply my-3;
+  .hero-headline {
+    @apply mt-4 max-w-2xl text-base opacity-90;
+  }
+  .hero-bio {
+    @apply mt-3 max-w-2xl text-sm opacity-75;
+  }
+  .tech-tags {
+    @apply mt-5 flex list-none flex-wrap gap-2 p-0;
+  }
+  .tech-tag {
+    @apply rounded-full border border-skin-line px-3 py-1 text-xs opacity-80 transition-colors duration-200 hover:border-skin-accent hover:text-skin-accent;
+  }
+  .hero-actions {
+    @apply mt-6 flex flex-wrap items-center gap-4;
+  }
+  :global(.hero-cta) {
+    @apply font-medium;
   }
   .social-wrapper {
-    @apply mt-4;
+    @apply mt-5;
   }
   section {
-    @apply py-6;
+    @apply py-8;
   }
   .section-link {
     @apply mt-6 text-center;
