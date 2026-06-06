@@ -14,7 +14,7 @@ import getSortedPosts from "@utils/getSortedPosts";
 import getSortedProjects from "@utils/getSortedProjects";
 import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
-import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
+import { fetchRecentPhotos, recentPhotos } from "@stores/galleryStore";
 import { profile } from "@data/profile";
 import { experience } from "@data/experience";
 import { articles } from "@data/articles";
@@ -40,7 +40,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const projects = await getCollection("projects");
 const sortedProjects = getSortedProjects(projects);
 
-await fetchRecentPhotos(8);
+await fetchRecentPhotos(16);
 const recentPhotoItems = Object.values(
   recentPhotos.get() as Record<string, UnsplashPhoto>
 ).map(photo => ({

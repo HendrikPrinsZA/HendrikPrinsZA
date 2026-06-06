@@ -3,10 +3,14 @@
   import PhotoSwipeLightbox from "photoswipe/lightbox";
   import Masonry from "svelte-bricks";
   import { createApi } from "unsplash-js";
+  import {
+    PUBLIC_UNSPLASH_API_ACCESS_KEY,
+    PUBLIC_UNSPLASH_USERNAME,
+  } from "astro:env/client";
   import "photoswipe/style.css";
 
-  const unsplashApiAccessKey = import.meta.env.PUBLIC_UNSPLASH_API_ACCESS_KEY;
-  const unsplashUsername = import.meta.env.PUBLIC_UNSPLASH_USERNAME;
+  const unsplashApiAccessKey = PUBLIC_UNSPLASH_API_ACCESS_KEY;
+  const unsplashUsername = PUBLIC_UNSPLASH_USERNAME;
   const unsplash = createApi({ accessKey: unsplashApiAccessKey });
 
   let lightbox;

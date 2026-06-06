@@ -2,9 +2,13 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ClientRouter } from "astro:transitions";
+import {
+  PUBLIC_GOOGLE_SITE_VERIFICATION,
+  PUBLIC_GOOGLE_TAG_MANAGER_ID,
+} from "astro:env/client";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-const googleTagId = import.meta.env.PUBLIC_GOOGLE_TAG_MANAGER_ID;
+const googleSiteVerification = PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleTagId = PUBLIC_GOOGLE_TAG_MANAGER_ID;
 
 export interface Props {
   title?: string;

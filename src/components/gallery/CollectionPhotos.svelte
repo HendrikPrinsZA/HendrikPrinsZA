@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { getCollectionBySlug, fetchCollectionPhotosMore } from '../../stores/galleryStore'
+  import { getCollectionBySlug, fetchCollectionPhotosMore } from "@stores/galleryStore";
   import IntersectionObserver from "svelte-intersection-observer";
 
   export let slug;

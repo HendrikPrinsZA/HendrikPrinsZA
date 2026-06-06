@@ -20,7 +20,7 @@
 </script>
 
 <div
-  class="pswp-gallery mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+  class="pswp-gallery mt-6 grid grid-cols-2 gap-3 sm:grid-cols-8 sm:gap-4"
   id="home-gallery"
 >
   {#each photos as recentPhoto (recentPhoto.id)}
