@@ -13,6 +13,7 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
+    "style": "prettier --write . --plugin=prettier-plugin-astro && eslint . --fix",
     "generate:images": "node bin/generate/index.js images"
   },
   "dependencies": {
