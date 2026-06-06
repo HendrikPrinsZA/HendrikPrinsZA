@@ -6,7 +6,10 @@ import Main from "@layouts/Main.astro";
 import Collections from "@components/gallery/Collections.svelte";
 ---
 
-<Layout title={`Gallery | ${SITE.title}`}>
+<Layout
+  title={`Gallery | ${SITE.title}`}
+  description="Photography gallery by Hendrik Prinsloo."
+>
   <Header activeNav="gallery" />
   <Main>
     <Collections client:load />

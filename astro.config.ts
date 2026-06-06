@@ -11,7 +11,17 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [react(), sitemap(), svelte(), vue()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: page =>
+        !page.includes("/search") &&
+        !page.includes("/api/") &&
+        !page.includes("/404"),
+    }),
+    svelte(),
+    vue(),
+  ],
   markdown: {
     remarkPlugins: [
       remarkToc,

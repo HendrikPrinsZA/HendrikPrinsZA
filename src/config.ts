@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://hendrikprinsloo.co.za/",
   author: "Hendrik Prinsloo",
-  desc: "This is me",
+  desc: "Technical lead and full stack developer based in Amsterdam. Portfolio, projects, writing, and career history.",
   title: "Hendrik Prinsloo",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

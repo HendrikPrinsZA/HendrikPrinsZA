@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "About"
+description: "Technical lead based in Amsterdam. Career history from software developer to lead DevOps engineer and technical lead across insurance, hospitality, commodities, and fintech."
 ---
 
 Technical lead based in Amsterdam, Netherlands.

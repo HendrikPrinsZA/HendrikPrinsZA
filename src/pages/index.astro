@@ -4,9 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
 import SectionHeading from "@components/SectionHeading.astro";
 import ExperienceTimeline from "@components/ExperienceTimeline.astro";
 import ArticleList from "@components/ArticleList.astro";
@@ -17,6 +15,8 @@ import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
 import { profile } from "@data/profile";
 import { experience } from "@data/experience";
 import { articles } from "@data/articles";
+import { SITE } from "@config";
+import { personSchema, webSiteSchema } from "@utils/seo";
 
 type UnsplashPhoto = {
   id: string;
@@ -49,21 +49,16 @@ const recentPhotoItems = Object.values(
 }));
 ---
 
-<Layout>
+<Layout
+  title={`${profile.name} | ${profile.title}`}
+  description={SITE.desc}
+  structuredData={[webSiteSchema(), personSchema()]}
+>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <!-- <h1>{profile.name}</h1>
-      <p class="hero-subtitle">
-        {profile.title} · {profile.location}
-      </p> -->
       <p>{profile.bio}</p>
-      <div class="social-wrapper">
-        <Socials />
-      </div>
     </section>
-
-    <Hr />
 
     <section id="gallery">
       <SectionHeading title="Photos" />
@@ -73,26 +68,15 @@ const recentPhotoItems = Object.values(
       </div>
     </section>
 
-    <Hr />
-
-    <!-- <section id="technologies">
-      <SectionHeading title="Technologies" />
-      <TechTags />
-    </section>
-
-    <Hr /> -->
-
     <section id="experience">
       <SectionHeading title="Experience" />
       <ExperienceTimeline entries={experience} limit={2} />
       <div class="section-link">
-        <LinkButton href="/experience/" showArrow={true}>
+        <LinkButton href="/career/" showArrow={true}>
           Full experience
         </LinkButton>
       </div>
     </section>
-
-    <Hr />
 
     <section id="writing">
       <SectionHeading title="Writing" />
@@ -107,7 +91,6 @@ const recentPhotoItems = Object.values(
     {
       recentPosts.length > 0 && (
         <>
-          <Hr />
           <section id="recent-posts">
             <SectionHeading title="Recent posts" />
             {recentPosts.length > 0 && (

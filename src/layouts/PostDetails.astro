@@ -8,6 +8,7 @@ import { render, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import { articleSchema } from "@utils/seo";
 
 export interface Props {
   post: CollectionEntry<"posts">;
@@ -34,15 +35,27 @@ const ogUrl = new URL(
   Astro.url.origin
 ).href;
 
+const pageUrl = canonicalURL ?? new URL(Astro.url.pathname, Astro.site).href;
+
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
   description,
   pubDatetime,
   modDatetime,
-  canonicalURL,
+  canonicalURL: pageUrl,
   ogImage: ogUrl,
+  ogImageAlt: title,
   scrollSmooth: true,
+  structuredData: articleSchema({
+    title,
+    description,
+    url: pageUrl,
+    image: ogUrl,
+    datePublished: pubDatetime.toISOString(),
+    dateModified: modDatetime?.toISOString(),
+    author,
+  }),
 };
 ---
 

@@ -20,7 +20,10 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 export const prerender = true;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout
+  title={`Posts | ${SITE.title}`}
+  description="Blog posts on software development, DevOps, and technology by Hendrik Prinsloo."
+>
   <Header activeNav="posts" />
   <Main>
     <ul>

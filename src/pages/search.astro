@@ -27,7 +27,7 @@ const searchList = sortedPosts.map(post => ({
 let tags = getUniqueTags(posts);
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
+<Layout title={`Search | ${SITE.title}`} robots="noindex, follow">
   <Header activeNav="search" />
   <Main pageDesc="">
     <SearchBar client:load searchList={searchList} />

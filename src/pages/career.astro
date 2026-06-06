@@ -13,18 +13,15 @@ import { SITE } from "@config";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 ---
 
-<Layout title={`Experience | ${SITE.title}`}>
-  <Header activeNav="experience" />
+<Layout
+  title={`Career | ${SITE.title}`}
+  description="Career history, education, and conferences of Hendrik Prinsloo — technical lead and full stack developer based in Amsterdam."
+>
+  <Header activeNav="career" />
   <Breadcrumbs />
 
   <main id="main-content">
-    <!-- <section class="page-section">
-      <h1 class="page-title">Experience</h1>
-      <p class="page-desc">Career history, education, and conferences.</p>
-    </section> -->
-
     <section class="page-section pt-8">
-      <!-- <SectionHeading title="Career" /> -->
       <ExperienceTimeline entries={experience} />
     </section>
 

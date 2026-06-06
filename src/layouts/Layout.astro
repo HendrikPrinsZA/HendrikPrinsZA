@@ -11,10 +11,14 @@ export interface Props {
   author?: string;
   description?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  robots?: string;
+  ogType?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -22,29 +26,35 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
+  ogImageAlt = SITE.title,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  robots = "index, follow",
+  ogType = pubDatetime ? "article" : "website",
+  structuredData,
 } = Astro.props;
 
 const socialImageURL = new URL(
   ogImage ?? SITE.ogImage ?? "og.png",
   Astro.url.origin
 ).href;
+
+const structuredDataJson = structuredData
+  ? JSON.stringify(structuredData)
+  : null;
 ---
 
 <!doctype html>
-<html
-  lang=`${LOCALE.lang ?? "en"}`
-  class={`${scrollSmooth && "scroll-smooth"}`}
->
+<html lang={LOCALE.lang ?? "en"} class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content={robots} />
 
     <!-- General Meta Tags -->
     <title>{title}</title>
@@ -52,12 +62,22 @@ const socialImageURL = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${SITE.title} RSS Feed`}
+      href="/rss.xml"
+    />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <!-- Article Published/Modified time -->
     {
@@ -78,11 +98,12 @@ const socialImageURL = new URL(
     }
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -92,12 +113,19 @@ const socialImageURL = new URL(
       rel="stylesheet"
     />
 
-    <meta name="theme-color" content="" />
+    <meta name="theme-color" content="#fefbfb" />
 
     {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
-      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
+      structuredDataJson && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={structuredDataJson}
+        />
+      )
+    }
+
+    {
       googleSiteVerification && (
         <meta
           name="google-site-verification"
