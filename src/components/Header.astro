@@ -11,7 +11,8 @@ export interface Props {
     | "career"
     | "search"
     | "gallery"
-    | "projects";
+    | "projects"
+    | "examples";
 }
 
 const { activeNav } = Astro.props;
@@ -62,11 +63,6 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-          <!-- <li>
-            <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
-              Posts
-            </a>
-          </li> -->
           <li>
             <a
               href="/projects/"
@@ -90,15 +86,6 @@ const { activeNav } = Astro.props;
               About
             </a>
           </li>
-          <!-- <li>
-            <a
-              href="https://github.com/HendrikPrinsZA"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </li> -->
           <li>
             <LinkButton
               href="/search/"

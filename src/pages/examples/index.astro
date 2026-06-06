@@ -1,0 +1,57 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Main from "@layouts/Main.astro";
+import ExampleCard from "@components/examples/ExampleCard.astro";
+import { examples } from "@data/examples";
+import { SITE } from "@config";
+---
+
+<Layout
+  title={`Examples | ${SITE.title}`}
+  description="Interactive examples showcasing the power and flexibility of Astro — islands, view transitions, API routes, and more."
+>
+  <Header activeNav="examples" />
+  <Main
+    pageTitle="Astro Examples"
+    pageDesc="A playground of demos showing why Astro is the framework for content-driven sites that still need sprinkles of interactivity."
+  >
+    <div class="intro">
+      <p>
+        Each example is a self-contained route. View the source on
+        <a
+          href="https://github.com/HendrikPrinsZA/HendrikPrinsZA/tree/main/src/pages/examples"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        to see how little code it takes.
+      </p>
+    </div>
+
+    <ul class="example-grid">
+      {
+        examples.map(example => (
+          <li>
+            <ExampleCard {example} />
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .intro {
+    @apply -mt-2 mb-8 text-sm opacity-80;
+  }
+  .example-grid {
+    @apply grid list-none gap-5 p-0 sm:grid-cols-2;
+  }
+  .example-grid > li:last-child:nth-child(odd) {
+    @apply sm:col-span-2 sm:max-w-md sm:justify-self-center sm:w-full;
+  }
+</style>

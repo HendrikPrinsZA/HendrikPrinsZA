@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "style": "prettier --write . --plugin=prettier-plugin-astro && eslint . --fix",
-    "generate:images": "node bin/generate/index.js images"
+    "generate:images": "node bin/generate/index.mjs images"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

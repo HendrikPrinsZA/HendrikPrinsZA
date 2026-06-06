@@ -1,0 +1,73 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import ServerTimestamp from "@components/examples/ServerTimestamp.astro";
+import LiveClock from "@components/examples/LiveClock.svelte";
+---
+
+<ExamplesLayout
+  title="Time Warp"
+  description="Compare server-rendered timestamps with a live client-side clock."
+>
+  <SectionHeading title="When was this rendered?" />
+
+  <p class="lede">
+    Astro components run on the server. Their output is plain HTML — fast,
+    crawlable, and accessible without JavaScript. Islands add interactivity only
+    where you need it.
+  </p>
+
+  <div class="time-grid">
+    <ServerTimestamp />
+    <LiveClock client:load />
+  </div>
+
+  <div class="comparison">
+    <h3>The difference</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Approach</th>
+          <th>Updates</th>
+          <th>JavaScript</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Server timestamp</td>
+          <td>Per request / build</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Live clock island</td>
+          <td>Every second</td>
+          <td>Svelte bundle only</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ExamplesLayout>
+
+<style>
+  .lede {
+    @apply mb-8 text-sm leading-relaxed opacity-85;
+  }
+  .time-grid {
+    @apply grid gap-5 sm:grid-cols-2;
+  }
+  .comparison {
+    @apply mt-10 rounded-xl border border-skin-line bg-skin-card bg-opacity-10 p-5;
+  }
+  .comparison h3 {
+    @apply text-sm font-semibold;
+  }
+  .comparison table {
+    @apply mt-3 w-full text-sm;
+  }
+  .comparison th {
+    @apply border-b border-skin-line pb-2 text-left font-medium opacity-70;
+  }
+  .comparison td {
+    @apply border-b border-skin-line border-opacity-50 py-2;
+  }
+</style>

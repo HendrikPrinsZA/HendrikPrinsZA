@@ -1,0 +1,66 @@
+---
+import ExamplesLayout from "@layouts/ExamplesLayout.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import Panel from "@components/examples/Panel.astro";
+import NestedGreeting from "@components/examples/NestedGreeting.astro";
+
+const instruments = [
+  { name: "Props", role: "Data flows down from parent to child" },
+  { name: "Default slot", role: "Children render where <slot /> is placed" },
+  { name: "Named slots", role: "Footer content via <Fragment slot='footer'>" },
+  { name: "Scoped CSS", role: "Styles stay local to each .astro file" },
+];
+---
+
+<ExamplesLayout
+  title="Component Orchestra"
+  description="Compose Astro components with slots, props, and scoped styles — all static."
+>
+  <SectionHeading title="Pure Astro composition" />
+
+  <p class="lede">
+    Not everything needs a framework. Astro components are the backbone — they
+    compile to HTML with optional scoped styles and zero runtime overhead.
+  </p>
+
+  <div class="orchestra">
+    <Panel title="The conductor" variant="accent">
+      <p>
+        This page is built entirely from <code>.astro</code> files. No islands, no
+        hydration, no client bundle for the layout itself.
+      </p>
+    </Panel>
+
+    <NestedGreeting recipient="visitor" />
+
+    <Panel title="The sections">
+      <ul class="instrument-list">
+        {
+          instruments.map(({ name, role }) => (
+            <li>
+              <strong>{name}</strong> — {role}
+            </li>
+          ))
+        }
+      </ul>
+      <Fragment slot="footer">
+        Each list item was mapped server-side at render time
+      </Fragment>
+    </Panel>
+  </div>
+</ExamplesLayout>
+
+<style>
+  .lede {
+    @apply mb-8 text-sm leading-relaxed opacity-85;
+  }
+  .lede code {
+    @apply rounded bg-skin-card px-1 text-xs;
+  }
+  .orchestra {
+    @apply space-y-5;
+  }
+  .instrument-list {
+    @apply list-none space-y-2 p-0 text-sm;
+  }
+</style>

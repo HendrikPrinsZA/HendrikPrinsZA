@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Main from "@layouts/Main.astro";
+import LinkButton from "@components/LinkButton.astro";
+import { SITE } from "@config";
+
+export interface Props {
+  title: string;
+  description?: string;
+  hidePageTitle?: boolean;
+}
+
+const { title, description, hidePageTitle = false } = Astro.props;
+---
+
+<Layout
+  title={`${title} | Examples | ${SITE.title}`}
+  description={description ??
+    "Interactive examples showcasing the power and flexibility of Astro."}
+>
+  <Header activeNav="examples" />
+  <Main pageTitle={hidePageTitle ? undefined : title} pageDesc={description}>
+    <p class="back-link">
+      <LinkButton href="/examples/">← All examples</LinkButton>
+    </p>
+    <slot />
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .back-link {
+    @apply -mt-2 mb-6 not-italic;
+  }
+</style>
