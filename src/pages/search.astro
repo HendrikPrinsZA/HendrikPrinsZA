@@ -29,7 +29,7 @@ let tags = getUniqueTags(posts);
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="search" />
-  <Main pageTitle="Search" pageDesc="">
+  <Main pageDesc="">
     <SearchBar client:load searchList={searchList} />
     <ul>
       {tags.map(({ tag }) => <Tag {tag} size="sm" />)}

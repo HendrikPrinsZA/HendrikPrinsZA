@@ -4,7 +4,14 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search" | "gallery" | "projects";
+  activeNav?:
+    | "posts"
+    | "tags"
+    | "about"
+    | "experience"
+    | "search"
+    | "gallery"
+    | "projects";
 }
 
 const { activeNav } = Astro.props;
@@ -55,11 +62,11 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-          <li>
+          <!-- <li>
             <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
               Posts
             </a>
-          </li>
+          </li> -->
           <li>
             <a
               href="/projects/"
@@ -70,14 +77,31 @@ const { activeNav } = Astro.props;
           </li>
           <li>
             <a href="/gallery/" class={activeNav === "gallery" ? "active" : ""}>
-              Gallery
+              Photos
             </a>
           </li>
           <li>
-            <a href="https://github.com/HendrikPrinsZA" target="_blank">
-              README
+            <a
+              href="/experience/"
+              class={activeNav === "experience" ? "active" : ""}
+            >
+              Experience
             </a>
           </li>
+          <li>
+            <a href="/about/" class={activeNav === "about" ? "active" : ""}>
+              About
+            </a>
+          </li>
+          <!-- <li>
+            <a
+              href="https://github.com/HendrikPrinsZA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li> -->
           <li>
             <LinkButton
               href="/search/"
@@ -204,26 +228,33 @@ const { activeNav } = Astro.props;
 </style>
 
 <script>
-  function toggleNav() {
-    // Toggle menu
+  let navAbortController;
+
+  function setupNavToggle() {
+    navAbortController?.abort();
+    navAbortController = new AbortController();
+    const { signal } = navAbortController;
+
     const menuBtn = document.querySelector(".hamburger-menu");
     const menuIcon = document.querySelector(".menu-icon");
     const menuItems = document.querySelector("#menu-items");
 
-    menuBtn?.addEventListener("click", () => {
-      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-      menuIcon?.classList.toggle("is-active");
-      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
-      menuBtn.setAttribute(
-        "aria-label",
-        menuExpanded ? "Open Menu" : "Close Menu"
-      );
-      menuItems?.classList.toggle("display-none");
-    });
+    menuBtn?.addEventListener(
+      "click",
+      () => {
+        const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuIcon?.classList.toggle("is-active");
+        menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+        menuBtn.setAttribute(
+          "aria-label",
+          menuExpanded ? "Open Menu" : "Close Menu"
+        );
+        menuItems?.classList.toggle("display-none");
+      },
+      { signal }
+    );
   }
 
-  toggleNav();
-
-  // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", toggleNav);
+  setupNavToggle();
+  document.addEventListener("astro:after-swap", setupNavToggle);
 </script>

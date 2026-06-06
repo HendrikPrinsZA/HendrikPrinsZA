@@ -13,6 +13,7 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
+    "style": "prettier --write . --plugin=prettier-plugin-astro && eslint . --fix",
     "generate:images": "node bin/generate/index.js images"
   },
   "dependencies": {
@@ -51,7 +52,7 @@
     "autoprefixer": "^10.5.0",
     "commander": "^14.0.3",
     "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-conventional-changelog": "^3.0.1",
     "eslint": "^10.3.0",
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.6.0",
@@ -81,7 +82,7 @@
       "lodash": "4.18.1"
     },
     "external-editor": {
-      "tmp": "0.2.5"
+      "tmp": "0.2.7"
     },
     "inquirer": {
       "lodash": "4.18.1"
@@ -96,7 +97,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx,json,astro}": [
-      "prettier --write --plugin=prettier-plugin-astro"
+      "prettier --write --plugin=prettier-plugin-astro",
+      "eslint --fix"
     ]
   }
 }

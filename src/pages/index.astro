@@ -6,12 +6,17 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-// import Socials from "@components/Socials.astro";
+import Socials from "@components/Socials.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import ExperienceTimeline from "@components/ExperienceTimeline.astro";
+import ArticleList from "@components/ArticleList.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-// import { SOCIALS } from "@config";
 import RecentPhotos from "@components/gallery/RecentPhotos.svelte";
 import { getContentSlug } from "@utils/getContentSlug";
 import { fetchRecentPhotos, recentPhotos } from "../stores/galleryStore";
+import { profile } from "@data/profile";
+import { experience } from "@data/experience";
+import { articles } from "@data/articles";
 
 type UnsplashPhoto = {
   id: string;
@@ -26,9 +31,7 @@ type UnsplashPhoto = {
 };
 
 const posts = await getCollection("posts");
-
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 await fetchRecentPhotos(8);
@@ -44,124 +47,120 @@ const recentPhotoItems = Object.values(
     thumb: photo.urls.thumb,
   },
 }));
-
-// const socialCount = SOCIALS.filter(social => social.active).length;
-const showFeaturedPosts = false;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <p>A collection of thoughts, opinions, and unfinished drafts.</p>
-      <!-- <p>
-        Full Stack Developer who has mastered the ability to assist family and
-        friends with anything remotely related to his field. Now also assumes
-        the role of toaster mechanic, technical sales advisor,
-        forgotten-password specialist, and let-me-google-that-for-you expert.
+      <!-- <h1>{profile.name}</h1>
+      <p class="hero-subtitle">
+        {profile.title} · {profile.location}
       </p> -->
-      <!-- <p>
-        Feel free to
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="/posts/automated-developer-portfolio/"
-        >
-          steal this
-        </LinkButton>.
-      </p> -->
+      <p>{profile.bio}</p>
+      <div class="social-wrapper">
+        <Socials />
+      </div>
     </section>
 
     <Hr />
+
     <section id="gallery">
-      <h2>Recent photos</h2>
+      <SectionHeading title="Photos" />
       <RecentPhotos photos={recentPhotoItems} client:load />
+      <div class="section-link">
+        <LinkButton href="/gallery/" showArrow={true}>Gallery</LinkButton>
+      </div>
     </section>
 
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/gallery/" showArrow={true}>Gallery</LinkButton>
-    </div>
+    <Hr />
+
+    <!-- <section id="technologies">
+      <SectionHeading title="Technologies" />
+      <TechTags />
+    </section>
+
+    <Hr /> -->
+
+    <section id="experience">
+      <SectionHeading title="Experience" />
+      <ExperienceTimeline entries={experience} limit={2} />
+      <div class="section-link">
+        <LinkButton href="/experience/" showArrow={true}>
+          Full experience
+        </LinkButton>
+      </div>
+    </section>
+
+    <Hr />
+
+    <section id="writing">
+      <SectionHeading title="Writing" />
+      <ArticleList entries={articles} limit={3} />
+      <div class="section-link">
+        <LinkButton href="https://medium.com/@hendrikprinsza" showArrow={true}>
+          All articles on Medium
+        </LinkButton>
+      </div>
+    </section>
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent posts</h2>
-          <ul>
-            {recentPosts.map(
-              (post, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${getContentSlug(post)}/`}
-                    frontmatter={post.data}
-                    secHeading={false}
-                  />
-                )
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    {
-      showFeaturedPosts && featuredPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(post => (
-                <Card
-                  href={`/posts/${getContentSlug(post)}/`}
-                  frontmatter={post.data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
+          <Hr />
+          <section id="recent-posts">
+            <SectionHeading title="Recent posts" />
+            {recentPosts.length > 0 && (
+              <ul>
+                {recentPosts.map(
+                  (post, index) =>
+                    index < 4 && (
+                      <Card
+                        href={`/posts/${getContentSlug(post)}/`}
+                        frontmatter={post.data}
+                        secHeading={false}
+                      />
+                    )
+                )}
+              </ul>
+            )}
+            <div class="section-link">
+              <LinkButton href="/posts/" showArrow={true}>
+                All posts
+              </LinkButton>
+            </div>
           </section>
-          {recentPosts.length > 0 && <Hr />}
         </>
       )
     }
-
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/" showArrow={true}>All Posts</LinkButton>
-    </div>
   </main>
 
   <Footer />
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
   #hero {
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply text-3xl font-bold sm:text-4xl;
   }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  .hero-subtitle {
+    @apply text-skin-accent;
   }
   #hero p {
-    @apply my-2;
+    @apply my-3;
   }
   .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+    @apply mt-4;
   }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  section {
+    @apply py-6;
   }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
+  .section-link {
+    @apply mt-6 text-center;
   }
-  h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+  #recent-posts ul {
+    @apply list-none p-0;
   }
 </style>

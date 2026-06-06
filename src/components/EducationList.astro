@@ -1,0 +1,61 @@
+---
+import type { EducationEntry } from "@data/education";
+
+export interface Props {
+  entries: EducationEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<ul class="education-list">
+  {
+    entries.map(entry => (
+      <li class="education-item">
+        <div class="education-meta">
+          <span class="education-dates">
+            {entry.start} — {entry.end}
+          </span>
+          <span class="education-location">{entry.location}</span>
+        </div>
+        <h3 class="education-degree">{entry.degree}</h3>
+        <p class="education-institution">
+          {entry.url ? (
+            <a href={entry.url} target="_blank" rel="noopener noreferrer">
+              {entry.institution}
+            </a>
+          ) : (
+            entry.institution
+          )}
+        </p>
+        {entry.description && (
+          <p class="education-description">{entry.description}</p>
+        )}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .education-list {
+    @apply list-none space-y-6 p-0;
+  }
+  .education-item {
+    @apply border-l-2 border-skin-line pl-5;
+  }
+  .education-meta {
+    @apply mb-1 flex flex-wrap gap-x-3 text-sm opacity-70;
+  }
+  .education-degree {
+    @apply text-lg font-medium;
+  }
+  .education-institution {
+    @apply mb-2 text-skin-accent;
+  }
+  .education-institution a {
+    @apply hover:underline;
+  }
+  .education-description {
+    @apply text-sm opacity-90;
+  }
+</style>

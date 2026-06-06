@@ -1,0 +1,59 @@
+---
+import type { EventEntry } from "@data/events";
+
+export interface Props {
+  entries: EventEntry[];
+  limit?: number;
+}
+
+const { entries, limit } = Astro.props;
+const items = limit === undefined ? entries : entries.slice(0, limit);
+---
+
+<ul class="event-list">
+  {
+    items.map(entry => (
+      <li class="event-item">
+        <div class="event-meta">
+          <span class="event-date">{entry.date}</span>
+          <span class="event-location">{entry.location}</span>
+        </div>
+        <h3 class="event-name">
+          {entry.url ? (
+            <a href={entry.url} target="_blank" rel="noopener noreferrer">
+              {entry.name}
+            </a>
+          ) : (
+            entry.name
+          )}
+        </h3>
+        <p class="event-organizer">{entry.organizer}</p>
+        <p class="event-description">{entry.description}</p>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .event-list {
+    @apply list-none space-y-5 p-0;
+  }
+  .event-item {
+    @apply rounded border border-skin-line p-4;
+  }
+  .event-meta {
+    @apply mb-1 flex flex-wrap gap-x-3 text-sm opacity-70;
+  }
+  .event-name {
+    @apply text-base font-medium;
+  }
+  .event-name a {
+    @apply text-skin-accent hover:underline;
+  }
+  .event-organizer {
+    @apply mb-1 text-sm opacity-80;
+  }
+  .event-description {
+    @apply text-sm opacity-90;
+  }
+</style>

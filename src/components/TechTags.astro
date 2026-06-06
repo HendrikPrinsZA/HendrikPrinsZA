@@ -1,0 +1,18 @@
+---
+import { profile } from "@data/profile";
+
+const { technologies } = profile;
+---
+
+<div class="tech-tags">
+  {technologies.map(tech => <span class="tech-tag">{tech}</span>)}
+</div>
+
+<style>
+  .tech-tags {
+    @apply flex flex-wrap gap-2;
+  }
+  .tech-tag {
+    @apply rounded border border-skin-line px-3 py-1 text-sm;
+  }
+</style>

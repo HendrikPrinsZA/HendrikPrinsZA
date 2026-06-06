@@ -7,6 +7,13 @@ const TextToSVG = require('text-to-svg');
 
 const DEFAULT_USERNAME = 'HendrikPrinsZA';
 
+function sanitizeUsername(username) {
+  if (!/^[a-zA-Z0-9-]+$/.test(username)) {
+    throw new Error(`Invalid GitHub username: ${username}`);
+  }
+  return username;
+}
+
 class MyStats {
   /** @type {String} */
   username = DEFAULT_USERNAME;
@@ -15,7 +22,7 @@ class MyStats {
   theme = 'tokyonight';
 
   constructor(username) {
-    this.username = username;
+    this.username = sanitizeUsername(username ?? DEFAULT_USERNAME);
   }
 
   images() {
@@ -38,10 +45,6 @@ class MyStats {
         key: 'codersrank-stats',
         url: `https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&branding=false&username=${this.username}&badges=3&show-avatar=false&style=--bg-color:%23292b3e;color:%231a1b27;--header-bg-color:%231a1b27;--header-text-color:%2370a4fc;--border-radius:0px;--badge-bg-color:%231a1b27;--badge-text-color:%2338bcad;`,
         type: 'png'
-      },
-      {
-        key: 'codersrank-graph',
-        url: `https://cr-skills-chart-widget.azurewebsites.net/api/api?username=${this.username}&branding=false&bg=%23292b3e&style=--legend-text-color:%2338bcad;--label-font-weight=300;`
       },
       {
         key: 'codersrank-graph',
@@ -111,7 +114,7 @@ program
   .description('Download profile images')
   .action((action) => {
     const opts = program.opts();
-    const username = opts.username ?? null;
+    const username = opts.username ?? DEFAULT_USERNAME;
     const myStats = new MyStats(username);
     myStats.images(action);
   });

@@ -4,6 +4,7 @@ import "@styles/base.css";
 import { ClientRouter } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleTagId = import.meta.env.PUBLIC_GOOGLE_TAG_MANAGER_ID;
 
 export interface Props {
   title?: string;
@@ -113,18 +114,22 @@ const socialImageURL = new URL(
     <slot />
 
     <!-- Google tag (gtag.js) -->
-    <script
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Z4R2NFG7Q7"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Z4R2NFG7Q7");
-    </script>
+    {
+      googleTagId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+          />
+          <script is:inline define:vars={{ googleTagId }}>
+            /* eslint-disable no-undef -- gtag.js uses the `arguments` object */
+            window.dataLayer = window.dataLayer || []; function gtag(){" "}
+            {window.dataLayer.push(arguments)}
+            gtag("js", new Date()); gtag("config", googleTagId);
+          </script>
+        </>
+      )
+    }
   </body>
 </html>
