@@ -1,17 +1,30 @@
 <script>
   import { onMount } from 'svelte';
   import { getCollectionBySlug, fetchCollectionPhotosMore } from '../../stores/galleryStore'
-  export let slug;
   import IntersectionObserver from "svelte-intersection-observer";
 
+  export let slug;
+
   let element;
-  let collection = {}
+  let collection = {};
+  let loadingMore = false;
+
   onMount(async () => {
     collection = await getCollectionBySlug(slug, true);
   });
 
-  // Create a variable valled hasMore
   $: hasMore = collection.fetched_photos?.length < collection?.total_photos;
+
+  async function loadMore() {
+    if (loadingMore || !hasMore) return;
+
+    loadingMore = true;
+    try {
+      collection = await fetchCollectionPhotosMore(slug);
+    } finally {
+      loadingMore = false;
+    }
+  }
 </script>
 {#if collection.id}
 <a
@@ -28,7 +41,7 @@
 {/if}
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
-  {#each Object.values(collection.fetched_photos) as photo}
+  {#each collection.fetched_photos ?? [] as photo (photo.id)}
     <a href="{photo.links.html}" target="_blank" rel="noopener noreferrer">
       <img
         class="h-auto max-w-full rounded-lg"
@@ -43,9 +56,8 @@
   <button
     type="button"
     class="group inline-block hover:text-skin-accent"
-    on:click={async () => {
-      collection = await fetchCollectionPhotosMore(collection.id);
-    }}
+    disabled={loadingMore}
+    on:click={loadMore}
   >
     Load more
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -54,9 +66,16 @@
   </button>
 {/if}  
 
-<IntersectionObserver {element} on:intersect={async (e) => { collection = await fetchCollectionPhotosMore(collection.id);}}>
-  <div bind:this={element}></div>
-</IntersectionObserver>
+{#if hasMore}
+  <IntersectionObserver
+    {element}
+    on:intersect={(e) => {
+      if (e.detail.isIntersecting) loadMore();
+    }}
+  >
+    <div bind:this={element}></div>
+  </IntersectionObserver>
+{/if}
 {:else}
   <p>Loading...</p>
 {/if}

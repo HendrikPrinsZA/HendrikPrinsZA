@@ -11,9 +11,37 @@ if (!unsplashApiAccessKey || !unsplashUsername) {
 }
 
 const unsplash = createApi({ accessKey: unsplashApiAccessKey ?? "" });
+const PHOTOS_PER_PAGE = 10;
 
 function isUnsplashConfigured() {
   return Boolean(unsplashApiAccessKey && unsplashUsername);
+}
+
+function mapPhoto(resultPhoto) {
+  const photoId = resultPhoto.id;
+  return {
+    id: photoId,
+    title: `Photo ${photoId}`,
+    width: resultPhoto.width,
+    height: resultPhoto.height,
+    links: {
+      html: resultPhoto.links.html,
+    },
+    urls: {
+      full: resultPhoto.urls.full,
+      regular: resultPhoto.urls.regular,
+      thumb: resultPhoto.urls.thumb,
+    },
+  };
+}
+
+function updateCollectionPhotos(collectionSlug, newPhotos) {
+  const lookup = collections.get();
+  const collection = lookup[collectionSlug];
+  const fetched_photos = [...(collection.fetched_photos ?? []), ...newPhotos];
+  const updated = { ...collection, fetched_photos };
+  collections.setKey(collectionSlug, updated);
+  return updated;
 }
 
 /** @type {import('nanostores').MapStore<Record<string, Object>>} */
@@ -83,39 +111,26 @@ export async function getCollectionBySlug(
   }
 
   if (prefetchPhotos) {
-    await fetchCollectionPhotos(slug);
+    return fetchCollectionPhotos(slug);
   }
 
-  return lookup[slug];
+  return collections.get()[slug];
 }
 
 export async function fetchCollectionPhotos(collectionSlug) {
   const collection = await getCollectionBySlug(collectionSlug);
+
+  if (collection.fetched_photos?.length > 0) {
+    return collection;
+  }
+
   const result = await unsplash.collections.getPhotos({
     collectionId: collection.id,
+    perPage: PHOTOS_PER_PAGE,
   });
   const resultPhotos = result?.response?.results ?? [];
 
-  for (let i = 0; i < resultPhotos.length; i++) {
-    const photoId = resultPhotos[i].id;
-    const photo = {
-      title: `Photo ${photoId}`,
-      width: resultPhotos[i].width,
-      height: resultPhotos[i].height,
-      links: {
-        html: resultPhotos[i].links.html,
-      },
-      urls: {
-        full: resultPhotos[i].urls.full,
-        regular: resultPhotos[i].urls.regular,
-        thumb: resultPhotos[i].urls.thumb,
-      },
-    };
-
-    collection.fetched_photos.push(photo);
-  }
-
-  return collection;
+  return updateCollectionPhotos(collectionSlug, resultPhotos.map(mapPhoto));
 }
 
 export async function fetchCollectionPhotosMore(collectionSlug) {
@@ -125,32 +140,19 @@ export async function fetchCollectionPhotosMore(collectionSlug) {
     return collection;
   }
 
+  const page =
+    Math.floor(collection.fetched_photos.length / PHOTOS_PER_PAGE) + 1;
+
   const result = await unsplash.collections.getPhotos({
     collectionId: collection.id,
-    // perPage: 10, // default
-    page: collection.fetched_photos.length / 10 + 1, // next page
-    // orderBy: 'latest', // default
+    perPage: PHOTOS_PER_PAGE,
+    page,
   });
   const resultPhotos = result?.response?.results ?? [];
 
-  for (let i = 0; i < resultPhotos.length; i++) {
-    const photoId = resultPhotos[i].id;
-    const photo = {
-      title: `Photo ${photoId}`,
-      width: resultPhotos[i].width,
-      height: resultPhotos[i].height,
-      links: {
-        html: resultPhotos[i].links.html,
-      },
-      urls: {
-        full: resultPhotos[i].urls.full,
-        regular: resultPhotos[i].urls.regular,
-        thumb: resultPhotos[i].urls.thumb,
-      },
-    };
-
-    collection.fetched_photos.push(photo);
+  if (resultPhotos.length === 0) {
+    return collection;
   }
 
-  return collection;
+  return updateCollectionPhotos(collectionSlug, resultPhotos.map(mapPhoto));
 }
