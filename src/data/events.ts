@@ -34,19 +34,19 @@ export const events: EventEntry[] = [
       "Ruby conference fostering the Ruby programming language and its community in Africa.",
   },
   {
-    name: "Microsoft Dev Day",
-    organizer: "Microsoft",
-    location: "Cape Town, South Africa",
-    date: "Sep 2015",
-    description:
-      "In-depth sessions on building next-generation cloud solutions using Microsoft Azure and the Universal Windows Platform.",
-  },
-  {
     name: "Developing for Microsoft Azure",
     organizer: "Microsoft",
     location: "Cape Town, South Africa",
     date: "Oct 2015",
     description:
       "Focus on the Microsoft roadmap and developing for Windows and Cloud platforms, including monetisation options.",
+  },
+  {
+    name: "Microsoft Dev Day",
+    organizer: "Microsoft",
+    location: "Cape Town, South Africa",
+    date: "Sep 2015",
+    description:
+      "In-depth sessions on building next-generation cloud solutions using Microsoft Azure and the Universal Windows Platform.",
   },
 ];

@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const { entries, limit } = Astro.props;
-const items = limit ? entries.slice(0, limit) : entries;
+const items = limit === undefined ? entries : entries.slice(0, limit);
 ---
 
 <ul class="event-list">

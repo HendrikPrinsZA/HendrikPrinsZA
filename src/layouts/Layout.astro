@@ -123,6 +123,7 @@ const socialImageURL = new URL(
             src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
           />
           <script is:inline define:vars={{ googleTagId }}>
+            /* eslint-disable no-undef -- gtag.js uses the `arguments` object */
             window.dataLayer = window.dataLayer || []; function gtag(){" "}
             {window.dataLayer.push(arguments)}
             gtag("js", new Date()); gtag("config", googleTagId);

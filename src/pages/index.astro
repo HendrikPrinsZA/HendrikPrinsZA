@@ -105,23 +105,25 @@ const recentPhotoItems = Object.values(
     </section>
 
     {
-      recentPosts.length > 0 && (
+      sortedPosts.length > 0 && (
         <>
           <Hr />
           <section id="recent-posts">
             <SectionHeading title="Recent posts" />
-            <ul>
-              {recentPosts.map(
-                (post, index) =>
-                  index < 4 && (
-                    <Card
-                      href={`/posts/${getContentSlug(post)}/`}
-                      frontmatter={post.data}
-                      secHeading={false}
-                    />
-                  )
-              )}
-            </ul>
+            {recentPosts.length > 0 && (
+              <ul>
+                {recentPosts.map(
+                  (post, index) =>
+                    index < 4 && (
+                      <Card
+                        href={`/posts/${getContentSlug(post)}/`}
+                        frontmatter={post.data}
+                        secHeading={false}
+                      />
+                    )
+                )}
+              </ul>
+            )}
             <div class="section-link">
               <LinkButton href="/posts/" showArrow={true}>
                 All posts
