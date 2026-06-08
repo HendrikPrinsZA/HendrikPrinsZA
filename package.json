@@ -71,7 +71,7 @@
     "text-to-svg": "^3.1.5"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.60.3"
+    "@rollup/rollup-linux-x64-gnu": "4.61.1"
   },
   "overrides": {
     "@divriots/cheerio": "npm:cheerio@1.2.0",
